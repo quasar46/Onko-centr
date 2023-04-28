@@ -1,0 +1,30 @@
+.btn-default {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  color: var(--color-blue-text);
+  background-color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 16px 25px;
+  // text-transform: uppercase;
+  border-radius: 8px;
+  border: 1px solid var(--color-blue-text);
+  cursor: pointer;
+  white-space: nowrap;
+  &--blue {
+    color: white;
+    background-color: var(--color-blue-back);
+    border: none;
+  }
+  &--notuppercase {
+    text-transform: none;
+  }
+  &--center {
+    align-self: center;
+  }
+  @media (max-width: 767px) {
+    height: 55px;
+  }
+}

@@ -1,96 +1,116 @@
+function openItem(evt, itemName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(itemName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.querySelectorAll(".tablinks").forEach((item) => {
+  if (window.innerWidth <= 767) {
+    item.addEventListener("click", function () {
+      document.querySelector(".main-menu__submenu").style.display = "flex";
+      document.querySelector(".main-menu__back").style.display = "flex";
+      document.querySelector(".main-menu__social").style.display = "none";
+    });
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
-  const swiper = new Swiper(".swiper-cases", {
-    // Optional parameters
-    loop: true,
-    centeredSlides: false,
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-cases .swiper-button-next",
-      prevEl: ".swiper-cases .swiper-button-prev",
-    },
+  document
+    .querySelector(".main-menu__back")
+    .addEventListener("click", function () {
+      document.querySelector(".main-menu__submenu").style.display = "none";
+      document.querySelectorAll(".tabcontent").forEach((item) => {
+        item.style.display = "none";
+      });
+    });
+  const minViewPort = (min = 375) => {
+    if (window.innerWidth <= min) {
+      const viewport = document.querySelector('[name="viewport"]');
+      if (viewport)
+        viewport.setAttribute("content", `width=${min}, user-scalable=no`);
+    }
+  };
+  minViewPort();
 
-    slidesPerView: "auto",
-    spaceBetween: 4,
+  const swiper = new Swiper(".swiper-programs", {
+    slidesPerView: 3,
+    spaceBetween: 16,
+    navigation: {
+      nextEl: ".swiper-nav__programs .button-swiper__next",
+      prevEl: ".swiper-nav__programs .button-swiper__prev",
+    },
     breakpoints: {
-      767: {
+      320: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1280: {
         slidesPerView: 6,
-        spaceBetween: 20,
-        centeredSlides: false,
       },
     },
   });
 
-  const swiper2 = new Swiper(".swiper-reviews ", {
-    // Optional parameters
-    // loop: true,
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-reviews .swiper-button-next",
-      prevEl: ".swiper-reviews .swiper-button-prev",
-    },
+  // tabs
+  var jsTriggers = document.querySelectorAll(".trigger"),
+    jsContents = document.querySelectorAll(".js-tab-content");
+  jsTriggers.forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      var id = this.getAttribute("data-tab"),
+        content = document.querySelector(
+          '.js-tab-content[data-tab="' + id + '"]'
+        ),
+        activeTrigger = document.querySelector(".trigger.active"),
+        activeContent = document.querySelector(".js-tab-content.active");
 
-    slidesPerView: 1,
-    spaceBetween: 0,
-    breakpoints: {
-      767: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-    },
-  });
+      activeTrigger.classList.remove("active"); // 1
+      trigger.classList.add("active"); // 2
 
-  document.querySelectorAll(".card__swiper-container").forEach((n) => {
-    const thumbs = new Swiper(n.querySelector(".mySwiper"), {
-      slidesPerView: 2,
-      spaceBetween: 10,
-      watchSlidesProgress: true,
-      slideToClickedSlide: true,
-      loop: true,
-      breakpoints: {
-        767: {
-          slidesPerView: 5,
-          spaceBetween: 10,
-        },
-      },
-    });
-    const slider = new Swiper(n.querySelector(".mySwiper2"), {
-      spaceBetween: 10,
-      navigation: {
-        nextEl: n.querySelector(".swiper-button-next"),
-        prevEl: n.querySelector(".swiper-button-prev"),
-      },
-      thumbs: {
-        swiper: thumbs,
-      },
+      activeContent.classList.remove("active"); // 3
+      content.classList.add("active"); // 4
+      window.dispatchEvent(new Event("resize"));
     });
   });
 
-  const cards = document.querySelectorAll(".cases__carousel .swiper-slide");
-  cards.forEach((card) => {
-    card.addEventListener("click", function () {
-      console.log(card);
-      document.querySelector("body").classList.add("hidden");
-      const cardAtr = card.getAttribute("data-swiper-slide-index");
-      const cardModals = document.querySelectorAll(".card-modal");
-      cardModals[cardAtr].classList.remove("hidden");
+  if (document.getElementById("phone")) {
+    var element = document.getElementById("phone");
+    var maskOptions = {
+      mask: "+7(000)000-00-00",
+      lazy: false,
+    };
+    var mask = new IMask(element, maskOptions);
+  }
+
+  if (document.querySelectorAll(".first-block__wrapper").length > 0) {
+    const heightBlock = document.querySelector(
+      ".first-block__wrapper"
+    ).clientHeight;
+
+    window.addEventListener("scroll", function () {
+      var cont_top = window.pageYOffset
+        ? window.pageYOffset
+        : document.body.scrollTop;
+      if (cont_top > heightBlock) {
+        document.querySelector(".burger").classList.add("burger--blue");
+      } else {
+        document.querySelector(".burger").classList.remove("burger--blue");
+      }
     });
-  });
-
-  $(".card__close").click(function () {
-    $(".card-modal").addClass("hidden");
-    $("body").removeClass("hidden");
-  });
-
-  $(".show-uno").click(function () {
-    $(".card-uno").removeClass("hidden");
-    document.querySelector("body").classList.add("hidden");
-  });
-  $(".show-bdns").click(function () {
-    $(".card-bdns").removeClass("hidden");
-    document.querySelector("body").classList.add("hidden");
-  });
-  $(".show-dwill").click(function () {
-    $(".card-dwill").removeClass("hidden");
-    document.querySelector("body").classList.add("hidden");
-  });
+  }
 });

@@ -1,0 +1,59 @@
+.modal.modal-appointment.overlay.active
+  .modal__wrapper 
+    .close 
+      img(src="img/close.png", alt="")
+    h2.title Запись на приём
+    .modal__subtitle Внимание! Для записи на приём вам надо иметь направление по форме № 057/у-04 (Направление на госпитализацию, восстановительное лечение, обследование, консультацию)
+    .modal-appointment__info
+      a(href="") 
+        img(src="img/svg/info.svg" alt="")
+      span Все поля формы обязательны для заполнения
+    .modal__inner 
+      form.form(action="") 
+        .form__block.w50
+          label(for="") Фамилия
+          input(type="text" placeholder="Фамилия" required)
+        .form__block.w50
+          label(for="") Имя
+          input(type="text" placeholder="Имя")
+        .form__block.w50 
+          label(for="") Отчество
+          input(type="text" placeholder="Отчество")
+        .form__block.w50.form__block--calendar
+          label(for="") Дата рождения
+          div
+            input(type="text" placeholder="Дата рождения")
+        .form__block.w50
+          label(for="") СНИЛС
+          input(type="text" placeholder="СНИЛС")
+        .form__block.w50
+          label(for="") Номер полиса ОМС
+          input(type="text" placeholder="Номер полиса ОМС")
+        .form__block.w100.row 
+          label(for="") Паспорт
+          input(type="text" placeholder="Серия")
+          input(type="text" placeholder="Номер")
+        .form__block.w100 
+          label(for="") Кем выдан
+          input(type="text" placeholder="Кем выдан")
+        .form__block.w100
+          label(for="") Адрес регистрации
+          input(type="text" placeholder="Адрес регистрации")
+        .form__block.w50 
+          label(for="") Электронная почта
+          input(type="text" placeholder="Email")
+        .form__block.w50
+          label(for="") Номер телефона
+          input#phone(type="text" placeholder="+7")
+        .form__block.w100 
+          label(for="") Опишите ситуацию
+          textarea(placeholder="К какому врачу и по какой ситуации вам нужна запись?" rows="9")
+        .form__block.w100.fstart 
+          label Введите текст с картинки
+          input(type="text" placeholder="Текст с картинки")
+        .form__block.form__block--checks
+          input(type="checkbox" id="check1")
+          label(for="check1") Согласен с политикой обработки персональных данных 
+          input(type="checkbox" id="check2")
+          label(for="check2") Согласен с политикой конфиденциальности
+        button.btn-default.btn-default--blue(type="submit") Отправить

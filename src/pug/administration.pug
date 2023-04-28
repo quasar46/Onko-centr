@@ -1,0 +1,65 @@
+doctype html
+html(lang="ru")
+  include modules/head
+  body
+    .wrapper
+      include modules/burger-inner
+      include modules/header
+      .page 
+        .breadcrumbs._container
+          a(href="") Главная 
+          span 
+          a О центре
+          span 
+          a(href="").active Руководство  
+        section.administration 
+          .administration__wrapper._container 
+            .block-head 
+              h1.title Руководство
+            .administration__inner.grid 
+              .administration__item.grid__item
+                .administration__pic 
+                  img(src="img/administration/pic1.png" alt="")
+                span.administration__name Станоевич Углеша Спасоевич
+                span.administration__post Главный врач
+              .administration__item.grid__item
+                .administration__pic 
+                  img(src="img/administration/pic2.png" alt="")
+                span.administration__name Гребенкин Егор Николаевич
+                span.administration__post Заместитель главного врача по медицинской части
+              .administration__item.grid__item
+                .administration__pic 
+                  img(src="img/administration/pic3.png" alt="")
+                span.administration__name Вожжова Наталья Владимировна
+                span.administration__post Заместитель главного врача по хирургической помощи
+              .administration__item.grid__item
+                .administration__pic 
+                  img(src="img/administration/pic4.png" alt="")
+                span.administration__name Лазарева Наталья Владимировна
+                span.administration__post Заместитель главного врача по клинико-экспертной работе
+              .administration__item.grid__item
+                .administration__pic 
+                  img(src="img/administration/pic5.png" alt="")
+                span.administration__name Пронин Дмитрий Семенович
+                span.administration__post Заместитель главного врача по амбулаторно-поликлинической помощи
+              .administration__item.grid__item
+                .administration__pic 
+                  img(src="img/administration/pic6.png" alt="")
+                span.administration__name Бессмертнова Ирина Сергеевна
+                span.administration__post Заместитель главного врача по экономическим вопросам
+              .administration__item.grid__item
+                .administration__pic 
+                  img(src="img/administration/pic7.png" alt="")
+                span.administration__name Долгин Владимир Иванович
+                span.administration__post Заместитель главного врача по организационно-методической работе
+              .administration__item.grid__item
+                .administration__pic 
+                  img(src="img/administration/pic8.png" alt="")
+                span.administration__name Кочерова Ирина Александровна
+                span.administration__post Главная медицинская сестра
+
+
+
+
+      include modules/footer
+    include modules/script

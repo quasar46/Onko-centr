@@ -1,0 +1,24 @@
+.nav-menu {
+  width: 120px;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  // background: rgba(232, 241, 249, 0.2);
+  /* Color/white-stroke 0.3 */
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  // backdrop-filter: blur(10px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 0px 8px 8px 0px;
+  &:hover {
+    background: #e8f1f9;
+    // backdrop-filter: blur(10px);
+  }
+  @media (max-width: 1919px) {
+    width: 80px;
+  }
+  @media (max-width: 1279px) {
+    display: none;
+  }
+}

@@ -1,0 +1,137 @@
+.card-top {
+  // background-image: url("../img/dots2-back.png");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  margin-bottom: 0;
+  padding-bottom: 120px;
+  @media (max-width: 1279px) {
+    background-image: none;
+    padding-bottom: 100px;
+  }
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+  }
+}
+
+.card-top__wrapper {
+  display: grid;
+  grid-template-columns: 660px auto;
+  grid-gap: 108px;
+  @media (max-width: 1919px) {
+    grid-template-columns: 523px auto;
+    grid-gap: 15px;
+  }
+  @media (max-width: 1279px) {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+}
+
+.card-top__pic {
+  display: flex;
+  justify-content: center;
+  background: rgba(27, 63, 94, 0.06);
+  border: 1px solid rgba(27, 63, 94, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  img {
+    // width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (max-width: 1279px) {
+    height: 360px;
+    // margin-bottom: 40px;
+  }
+  @media (max-width: 767px) {
+    height: 250px;
+  }
+}
+
+.card-top__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-top__department {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-dark-text);
+  margin-bottom: 40px;
+  @media (max-width: 1279px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+.card-top__name {
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--color-blue-text);
+  @media (max-width: 1919px) {
+    font-size: 55px;
+  }
+  @media (max-width: 1279px) {
+    font-size: 50px;
+  }
+  @media (max-width: 767px) {
+    font-size: 32px;
+  }
+}
+
+.card-top__description {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-black-text);
+  @media (max-width: 1279px) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+}
+
+.card-top__numbers {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(27, 63, 94, 0.06);
+    border: 1px solid rgba(27, 63, 94, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 30px;
+    width: 50%;
+    span {
+      &:first-child {
+        font-size: 36px;
+        font-weight: 400;
+        color: var(--color-blue-text);
+        @media (max-width: 767px) {
+          font-size: 28px;
+        }
+      }
+      &:last-child {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--color-dark-text);
+        @media (max-width: 767px) {
+          font-size: 14px;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}

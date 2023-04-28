@@ -1,0 +1,58 @@
+// .administration {
+//   background-image: url("../img/dots-back.png");
+// }
+
+.administration__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px 15px;
+  @media (max-width: 1919px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 1279px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 767px) {
+    grid-gap: 20px 8px;
+  }
+}
+
+// .administration__item {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.administration__pic {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: rgba(27, 63, 94, 0.06);
+  border: 1px solid rgba(27, 63, 94, 0.1);
+  @media (max-width: 1279px) {
+    background-image: none;
+  }
+}
+
+.administration__name {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-blue-back);
+  padding-right: 70px;
+  @media (max-width: 767px) {
+    font-size: 20px;
+    padding-right: 0;
+  }
+}
+
+.administration__post {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-dark-text);
+  padding-right: 70px;
+  @media (max-width: 767px) {
+    font-size: 14px;
+    padding-right: 0;
+  }
+}

@@ -31,10 +31,12 @@ gulp.task("css", function () {
     .src("src/scss/styles.scss")
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer()]))
-    .pipe(sass().on('error', function(error) {
-      // здесь ошибка
-      done(error);
-    }))
+    .pipe(
+      sass().on("error", function (error) {
+        // здесь ошибка
+        done(error);
+      })
+    )
     .pipe(rename("style.min.css"))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("build/css"));

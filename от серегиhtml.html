@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        outline: 1px solid blueviolet;
+        margin: 20px;
+        padding: 20px;
+        position: relative;
+      }
+
+      @media (max-width: 1200px) {
+        .wrap {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .wrap {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .box {
+        border: 1px solid blue;
+        padding: 10px;
+        font-size: 24px;
+      }
+
+      .box-spacer {
+        flex: 1;
+        display: grid;
+        gap: 20px;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .box-spacer span {
+        display: block;
+        flex: 1;
+        border: 1px solid red;
+        position: relative;
+        background: yellow;
+      }
+
+      .box-spacer span::before,
+      .box-spacer span::after {
+        content: "";
+        background: #fff;
+        position: absolute;
+        width: 70%;
+        display: block;
+        top: -2px;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, tenetur alias, adipisci unde labore vero hic
+        ratione eveniet nisi fuga incidunt modi eos ipsa et iure totam. Iste, minima totam?
+      </div>
+      <div class="box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam temporibus amet perferendis. Temporibus,
+        quas ex obcaecati dolore cum consequuntur sapiente.
+      </div>
+      <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, sed?</div>
+      <div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia molestiae, maxime, ipsum sapiente ipsam, amet
+        at quaerat fugiat modi quas iusto minus ad voluptas eveniet neque praesentium? Nobis, atque minus.
+      </div>
+      <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perferendis architecto nesciunt cumque,
+        quas minus error, sapiente ut iste molestiae, a vero harum accusamus magnam. Voluptates qui maxime consequatur
+        aspernatur!
+      </div>
+      <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perferendis architecto nesciunt cumque,
+        quas minus error, sapiente ut iste molestiae, a vero harum accusamus magnam. Voluptates qui maxime consequatur
+        aspernatur!
+      </div>
+      <div class="box-spacer"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+      $(window)
+        .on("resize", function () {
+          $(".wrap").each(function () {
+            const style = getComputedStyle($(this)[0]);
+            const wrap = $(this);
+            const spacer = $(this).find(".box-spacer");
+            const rowHeigth = $(this).find(".box").last().outerHeight();
+            const columns = style.gridTemplateColumns.split(" ");
+
+            spacer.html("").height(rowHeigth).css({
+              left: style.paddingLeft,
+              right: style.paddingRight,
+              bottom: style.paddingBottom,
+              gridTemplateColumns: style.gridTemplateColumns,
+            });
+
+            $(columns).each(function () {
+              spacer.append($("<span></span>"));
+            });
+
+            spacer.find("span").each(function () {
+              const { x, y } = $(this)[0].getBoundingClientRect();
+              const _x = parseInt(x);
+              const _y = parseInt(y);
+              const span = $(this);
+
+              wrap.children().each(function () {
+                const { x, y } = $(this)[0].getBoundingClientRect();
+                const _xW = parseInt(x);
+                const _yW = parseInt(y);
+
+                if (_xW == _x && _yW == _y) {
+                  span.css("opacity", 0);
+                }
+              });
+            });
+          });
+        })
+        .trigger("resize");
+    </script>
+  </body>
+</html>

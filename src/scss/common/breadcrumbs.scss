@@ -1,0 +1,35 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  width: 100%;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
+  a {
+    color: var(--color-grey-text);
+    white-space: nowrap;
+    &.active {
+      color: var(--color-blue-text);
+    }
+    &:hover:not(.active) {
+      color: #6B8FAE;
+      transition: 0.3s ease all;
+    }
+  }
+  span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-grey-text);
+  }
+  @media (max-width: 1279px) {
+    margin-bottom: 30px;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

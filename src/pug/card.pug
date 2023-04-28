@@ -1,0 +1,64 @@
+doctype html
+html(lang="ru")
+  include modules/head
+  body
+    .wrapper
+      include modules/burger-inner
+      include modules/header
+      .page 
+        .breadcrumbs._container
+          a(href="") Главная 
+          span 
+          a(href="") Врачи и персонал
+          span 
+          a.active Прокопенко Ирина Александровна
+
+        section.card 
+          .card__wrapper
+            section.card__top.card-top.back-dots.back-dots--3 
+              .card-top__wrapper._container
+                .card-top__pic 
+                  img(src="img/card/pic1.png" alt="")
+                .card-top__content 
+                  span.card-top__department ХИМИОТЕРАПЕВТИЧЕСКОЕ ОТДЕЛЕНИЕ № 1
+                  h1.card-top__name Прокопенко Ирина Александровна
+                  span.card-top__description Заведующая отделением, врач-онколог высшей квалификационной категории
+                  .card-top__numbers
+                    div
+                      span 2001 год
+                      span Год начала работы в Курском онкологическом научно-клинический центр им. Г.Е. Островерхова
+                    div
+                      span 32 года
+                      span Общий стаж работы
+            .card__bottom.card-bottom.back-dots.back-dots--2 
+              .card-bottom__wrapper._container
+                .card-bottom__row
+                  h3.card-bottom__title Образование
+                  ul 
+                    li Окончила Курский государственный медицинский университет по специальности «Лечебное дело» в 1991 году получив квалификацию врача
+                    li Имеет сертификат специалиста по специальности «Онкология». Выдан 25.02.2019 г. (срок действия — 5 лет)
+                .card-bottom__row
+                  h3.card-bottom__title Опыт работы
+                  ul
+                    li В настоящий момент занимает должность профессора радиологии в больнице «Хадасса». Руководил департаментом радиологической диагностики данной клиники до декабря 2011 года.
+                    li Работа в Hebrew University и Hadassah University Hospital:
+                    li 1983–1990 — рентгенолог;
+                    li 1984 ассистент кафедры рентгенологии;
+                    li 2003–2011 заведующий отделением рентгенологии;
+                    li Работа в других научных и исследовательских организациях:
+                .card-bottom__row
+                  h3.card-bottom__title Научные публикации и награды
+                  ul
+                    li 
+                      a Treatment of asymptomatic carotid stenosis in SPACE-2. The Lancet Neurology Vol. 22No. 3p197, March, 2023
+                    li 
+                      a A nasal CGRP receptor antagonist for acute migraine therapy The Lancet Neurology Vol. 22No. 3p190–191, March, 2023
+
+
+
+
+
+
+
+      include modules/footer
+    include modules/script

@@ -1,73 +1,115 @@
 $(document).ready(function () {
-  console.log("jq start");
-  $(".marquee").marquee({
-    //duration in milliseconds of the marquee
-    duration: 15000,
-    //gap in pixels between the tickers
-    gap: 50,
-    //time in milliseconds before the marquee will start animating
-    delayBeforeStart: 0,
-    //'left' or 'right'
-    direction: "left",
-    //true or false - should the marquee be duplicated to show an effect of continues flow
-    duplicated: true,
-  });
+  // main-menu
+  // $(".main-menu__nav").on("click", "a.current:not(.active)", function () {
+  //   $(this)
+  //     .addClass("active")
+  //     .siblings()
+  //     .removeClass("active")
+  //     .closest(".main-menu__inner")
+  //     .find(".main-menu__links")
+  //     .removeClass("active")
+  //     .eq($(this).index())
+  //     .addClass("active");
+  // });
 
-  $(".header__burger").on("click", function () {
+  $(".show-menu").on("click", function () {
+    $(".main-menu").toggleClass("active");
     $(this).toggleClass("active");
     $("body").toggleClass("hidden");
   });
 
-  $(".nav__links a").click(function () {
+  $(".main-menu__close").on("click", function () {
+    $(this).closest(".main-menu").removeClass("active");
+  });
+
+  $(".accordion__caption").on("click", function () {
+    if ($(this).next().css("display") == "block") {
+      $(this).next().slideUp();
+      $(".accordion__caption").removeClass("active");
+    } else {
+      $(this).siblings(".accordion__content").slideUp();
+      $(this).next().slideDown();
+      $(".accordion__caption").removeClass("active");
+      $(this).addClass("active");
+    }
+  });
+
+  $(".modal__wrapper .close").on("click", function () {
+    $(this).closest(".overlay").removeClass("active");
     $("body").removeClass("hidden");
-    $(".burger").removeClass("active");
+  });
+
+  $("#show-review").on("click", function () {
+    $("body").addClass("hidden");
+    $(".modal-review").addClass("active");
+  });
+
+  $(window)
+    .on("resize", function () {
+      $(".wrap").each(function () {
+        const style = getComputedStyle($(this)[0]);
+        const wrap = $(this);
+        const spacer = $(this).find(".box-spacer");
+        const rowHeigth = $(this).find(".box").last().outerHeight();
+        const columns = style.gridTemplateColumns.split(" ");
+
+        spacer.html("").height(rowHeigth).css({
+          left: style.paddingLeft,
+          right: style.paddingRight,
+          bottom: style.paddingBottom,
+          gridTemplateColumns: style.gridTemplateColumns,
+        });
+
+        $(columns).each(function () {
+          spacer.append($("<span></span>"));
+        });
+
+        spacer.find("span").each(function () {
+          const { x, y } = $(this)[0].getBoundingClientRect();
+          const _x = parseInt(x);
+          const _y = parseInt(y);
+          const span = $(this);
+
+          wrap.children().each(function () {
+            const { x, y } = $(this)[0].getBoundingClientRect();
+            const _xW = parseInt(x);
+            const _yW = parseInt(y);
+
+            if (_xW == _x && _yW == _y) {
+              span.css("opacity", 0);
+            }
+          });
+        });
+      });
+    })
+    .trigger("resize");
+
+  $("#showSearch").on("click", function () {
+    $(".search-block").addClass("active");
   });
 
   $(function () {
-    $('a[href^="#"]').on("click", function (evt) {
-      // отменяем стандартное действие
-      evt.preventDefault();
-
-      var sc = $(this).attr("href"),
-        dn = $(sc).offset().top;
-      /*
-       * sc - в переменную заносим информацию о том, к какому блоку надо перейти
-       * dn - определяем положение блока на странице
-       */
-
-      $("html, body").animate({ scrollTop: dn }, 1000);
-
-      /*
-       * 1000 скорость перехода в миллисекундах
-       */
-    });
-  });
-
-  $(".tabs-content").hide();
-  $(".tabs-head").on("click", function () {
-    $(this).toggleClass("active");
-    $(this).next().toggle();
-  });
-
-  autosize($("textarea"));
-
-  $(document).ready(function () {
-    if (window.innerWidth < 768) {
-      var observer = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              $(entry.target).addClass("active bounceInLeft");
-            } else {
-              $(entry.target).removeClass("active bounceInLeft");
-            }
-          });
-        },
-        { threshold: 1 }
-      );
-      $(".cases__picture").each(function () {
-        observer.observe(this);
+    $.fn.scrollToTop = function () {
+      $(this).hide().removeAttr("href");
+      if ($(window).scrollTop() != "0") {
+        $(this).fadeIn("slow");
+      }
+      var scrollDiv = $(this);
+      $(window).scroll(function () {
+        if ($(window).scrollTop() == "0") {
+          $(scrollDiv).fadeOut("slow");
+        } else {
+          $(scrollDiv).fadeIn("slow");
+        }
       });
-    }
+      $(this).click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+    };
   });
+  $(function () {
+    $("#btnTop").scrollToTop();
+  });
+
+  //- #test кнопочка
 });

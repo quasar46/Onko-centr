@@ -1,0 +1,57 @@
+.card-bottom {
+  // background-image: url("../img/dots-back.png");
+}
+
+.card-bottom__title {
+  font-size: 45px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  @media (max-width: 767px) {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+.card-bottom__row {
+  margin-bottom: 80px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    li {
+      position: relative;
+      padding-left: 30px;
+      color: var(--color-dark-text);
+      font-size: 16px;
+      line-height: 1.6;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: var(--color-blue-back);
+        @media (max-width: 1279px) {
+          top: 7px;
+        }
+        @media (max-width: 767px) {
+          top: 4px;
+        }
+      }
+      a {
+        text-decoration: underline;
+      }
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+    @media (max-width: 767px) {
+      gap: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
