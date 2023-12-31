@@ -1,0 +1,22 @@
+.input {
+  border-radius: 6px;
+  border: 1px solid var(--border-default-input, #d7dbdf);
+  background: var(--white, #fff);
+  overflow: hidden;
+  input {
+    color: var(--placeholder-and-breadcrumbs, #889096);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.176px;
+    padding: 0 12px;
+    height: 48px;
+    width: 100%;
+    border: none;
+    &:focus-visible {
+      outline: none;
+      
+    }
+  }
+}

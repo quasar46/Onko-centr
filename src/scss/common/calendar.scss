@@ -1,0 +1,16 @@
+.calendar {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-image: url("../img/icons/calendar_month.svg");
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: 24px auto;
+  }
+}

@@ -1,312 +1,328 @@
-doctype html
-html(lang="ru")
-  include modules/head
-  body
-    .wrapper
-      include modules/burger-inner
-      include modules/header
-      .page 
-        .breadcrumbs._container
-          a(href="") Главная 
-          span 
-          a.active Поиск
-        section.article 
-          .article__wrapper._container 
+extends templates/layout
 
-            .block-head.article__container 
-              h1.title Заголовок
-            .article__block
-              figure 
-                img(src="img/Rectangle20.png" alt="")
-            .article__block
-              ._mini-container
-                h2 h2 История развития
-                p Первые онкологические учреждения появились на Курской земле в январе 1946 года: областной онкодиспансер, онкологический пункт в Белгороде, входившем тогда в состав Курской области, кабинет в курской городской поликлинике №2.
-                h3 С чего всё начиналось
-              figure 
-                img(src="img/Frame153.png" alt="")
-                figcaption Подпись под фотографией. Если конечно есть старые фото как всё начиналось (2048 год)
-              ._mini-container
-                p Первые онкологические учреждения появились на Курской земле в январе 1946 года: областной онкодиспансер, онкологический пункт в Белгороде, входившем тогда в состав Курской области, кабинет в курской городской поликлинике №2. С 1947 года в течение трех лет для дистанционной лучевой терапии, основного метода лечения рака в то время, больные направлялись в Москву, Харьков, Воронеж. В январе 1950 года в онкодиспансере начали проводить глубокую рентгенотерапию. В этот период (с 1946 по 1950 год) закладывались основные методы организации онкологической помощи. В каждом районе были врачи, ответственные за проведение этой работы. В штате диспансера первоначально состояло 4 человека: главный врач Иван Клименко, врач-радиолог Анна Лядова, медсестра Александра Петрова, медстатистик Ольга Соколова. Начало развития цитологии в регионе положили Александра Грюнберг и Лидия Гурвич. Благодаря своей лаборатории, сроки диагностики сократились.
-                p Официальная онкологическая статистика появилась в 1956 году. Рак желудка за эти годы вырос в 1,2 раза, легкого - в 62 раза, молочной железы - в 6,5 раза, прямой кишки - в 16 раз. На конец 1949 года на учете состояло 2564 больных, а на конец 2005 года - 24 029 человек, что больше в 9,5 раза.
-                p В сентябре 1973 года были госпитализированы первые больные в новое здание онкологии. В штате диспансера состояло уже 112 человек. Функционировали отделения: диспансерное, радиологическое, хирургическое, гинекологическое, диагностическое. Впервые больные со злокачественными новообразованиями начали получать специализированную помощь централизованно. В районах области и в Курске была создана сеть смотровых кабинетов для раннего выявления предопухолевых и опухолевых заболеваний. Историческим стало событие 1975 года - онкодиспансер первым в области получил эндоскопическую аппаратуру - 3 фиброскопа. В этом же году была открыта радиоизотопная лаборатория. В лучевом лечении произошла революция.
-            ._mini-container
-              .article__block
-                .quote 
-                  p Цитата: Первые онкологические учреждения появились на Курской земле в январе 1946 года: областной онкодиспансер, онкологический пункт в Белгороде, входившем тогда в состав Курской области, кабинет в курской городской поликлинике №2.
-              .article__block
-                h2 Онкоцентр сейчас
-                p Сегодня Курский областной онкодиспансер располагает 300 стационарными койками и является крупным лечебно-диагностическим и организационно-методическим центром. Функционируют 4 хирургических отделения, диспансерное, химиотерапевтическое, радиологическое отделения, дневной стационар, диагностические и вспомогательные службы. По словам главного врача Игоря Киселева, в стенах диспансера ежегодно стационарно лечится около 7000 больных, выполняется 3500 операций, более 70 тысяч больных обследуются и лечатся амбулаторно. Рост заболеваемости и расширение возможностей хирургического метода ведут к неуклонному росту и интенсификации хирургической деятельности.
-                h4 H4 заголовок
-                h5 H5 заголовок
-                h6 H6 заголовок
-                p Курский онкодиспансер является признанным в России центром по лечению рака пищевода, простаты, мочевого пузыря, опухолей головы и шеи и другим локализациям. Используются почти все современные лекарственные препараты и методики лечения, рекомендуемые к применению ведущими научно-исследовательскими онкологическими институтами России. Большое внимание уделяется профилактике побочных явлений и улучшению качества жизни больных, получающих лечение. Помощь больным в настоящее время оказывают 82 врача и 145 медработников. Пять врачей имеют ученую степень кандидата медицинских наук, 42 врача и 45 медсестер - высшую квалификационную категорию. Диспансер является клинической базой кафедры онкологии КГМУ.
-              .article__block
-                h2 Ненумерованный список
-                ul 
-                  li В настоящий момент занимает должность профессора радиологии в больнице «Хадасса». Руководил департаментом радиологической диагностики данной клиники до декабря 2011 года.
-                  li Работа в Hebrew University и Hadassah University Hospital:
-                  li 1983–1990 — рентгенолог;
-                  li 1984 ассистент кафедры рентгенологии;
-                  li 2003–2011 заведующий отделением рентгенологии;
-                  li Работа в других научных и исследовательских организациях:
-              .article__block
-                h2 Нумерованный список
-                ol 
-                  li В настоящий момент занимает должность профессора радиологии в больнице «Хадасса». Руководил департаментом радиологической диагностики данной клиники до декабря 2011 года.
-                  li Работа в Hebrew University и Hadassah University Hospital:
-                  li 1983–1990 — рентгенолог;
-                  li 1984 ассистент кафедры рентгенологии;
-                  li 2003–2011 заведующий отделением рентгенологии;
-                  li Работа в других научных и исследовательских организациях:
-              .article__block
-                h2 Ненумерованный список с ссылками
-                ul 
-                  li Treatment of asymptomatic carotid stenosis in SPACE-2. The Lancet Neurology Vol. 22No. 3p197, March, 2023
-                  li A nasal CGRP receptor antagonist for acute migraine therapy The Lancet Neurology Vol. 22No. 3p190–191, March, 2023
-              .article__block
-                h2 Ссылки на скачивание
-                a(href="") Treatment of asymptomatic carotid stenosis in SPACE-2. The Lancet Neurology Vol. 22No. 3p197, March, 2023
-                a(href="") A nasal CGRP receptor antagonist for acute migraine therapy The Lancet Neurology Vol. 22No. 3p190–191, March, 2023
-              .article__block
-                h2 Ссылки с подписью под ними
-                a(href="") Treatment of asymptomatic carotid stenosis in SPACE-2. The Lancet Neurology Vol. 22No. 3p197, March, 2023
-                span Подпись под ссылкой: Также как понимание сути ресурсосберегающих технологий способствует повышению качества кластеризации усилий.
-                a(href="") Treatment of asymptomatic carotid stenosis in SPACE-2. The Lancet Neurology Vol. 22No. 3p197, March, 2023
-                span Подпись под ссылкой: Также как понимание сути ресурсосберегающих технологий способствует повышению качества кластеризации усилий.
-                a(href="") Treatment of asymptomatic carotid stenosis in SPACE-2. The Lancet Neurology Vol. 22No. 3p197, March, 2023
-                span Подпись под ссылкой: Также как понимание сути ресурсосберегающих технологий способствует повышению качества кластеризации усилий.
-            .article__block
-              h4 Заголовок таблицы
-              .article__table
-                table(style="overflow-x: auto") 
-                  tr 
-                    th Заголовок столбца
-                    th Заголовок столбца
-                    th Заголовок столбца
-                    th Заголовок столбца
-                    th Заголовок столбца
-                  tr 
-                    td Также как понимание сути ресурсосберегающих технологий способствует повышению качества кластеризации усилий.
-                    td Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества кластеризации усилий.
-                    td Есть над чем задуматься: ключевые особенности структуры проекта функционально разнесены на независимые элементы.
-                    td Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества кластеризации усилий.
-                    td Есть над чем задуматься: ключевые особенности структуры проекта
-                  tr 
-                    td Имеется спорная точка зрения, гласящая примерно следующее: стремящиеся вытеснить традиционное производство, нанотехнологии объективно рассмотрены соответствующими инстанциями.
-                    td Прежде всего, перспективное планирование представляет собой интересный эксперимент проверки глубокомысленных рассуждений.
-                    td В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные прототипы и по сей день остаются уделом либералов, которые жаждут быть преданы социально-демократической анафеме.
-                    td Прежде всего, перспективное планирование представляет собой интересный эксперимент проверки глубокомысленных рассуждений.
-                    td В своём стремлении
-                  tr 
-                    td 
-                      h6 Заголовок внутри ячейки
-                      span Также как понимание сути ресурсосберегающих технологий способствует повышению качества кластеризации усилий.
-                    td
-                      h6 Заголовок внутри ячейки
-                      span Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества кластеризации усилий.
-                    td
-                      h6 Заголовок внутри ячейки
-                      span Есть над чем задуматься
-                    td
-                      h6 Заголовок внутри ячейки
-                      span Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества кластеризации усилий.
-                    td
-                      h6 Заголовок внутри ячейки
-                      span Есть над чем задуматься: ключевые особенности структуры проекта функционально разнесены на независимые элементы.
-                  tr 
-                    td Имеется спорная точка зрения, гласящая примерно следующее
-                    td Прежде всего, перспективное планирование представляет собой интересный эксперимент проверки глубокомысленных рассуждений.
-                    td В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные прототипы и по сей день остаются уделом либералов, которые жаждут быть преданы социально-демократической анафеме.
-                    td Прежде всего, перспективное планирование представляет собой интересный эксперимент проверки глубокомысленных рассуждений.
-                    td В своём стремлении улучшить пользовательский опыт мы упускаем, что интерактивные прототипы и по сей день остаются уделом либералов, которые жаждут быть преданы социально-демократической анафеме.
-            .article__block
-              h4 Заголовок таблицы минимум столбцов
-              .article__table
-                table(style="overflow-x: auto")
-                  tr
-                    th Заголовок столбца
-                    th Заголовок столбца
-                  tr
-                    td Также как понимание сути ресурсосберегающих технологий способствует повышению качества кластеризации усилий.
-                    td Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества кластеризации усилий.
-                  tr
-                    td Имеется спорная точка зрения, гласящая примерно следующее: стремящиеся вытеснить традиционное производство, нанотехнологии объективно рассмотрены соответствующими инстанциями.
-                    td Прежде всего, перспективное планирование представляет собой интересный эксперимент проверки глубокомысленных рассуждений.
-                  tr
-                    td 
-                      h6 Заголовок внутри ячейки
-                      span Также как понимание сути ресурсосберегающих технологий способствует повышению качества кластеризации усилий.
-                    td 
-                      h6 Заголовок внутри ячейки
-                      span Равным образом, постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества кластеризации усилий.
-                  tr
-                    td Имеется спорная точка зрения, гласящая примерно следующее
-                    td Прежде всего, перспективное планирование представляет собой интересный эксперимент проверки глубокомысленных рассуждений.
-            .article__block._mini-container
-              h2 Часто задаваемые вопросы
-              .accordion 
-                .accordion__caption 
-                  span Вопрос
-                  img(src="../img/svg/expand_more.svg" alt="")
-                .accordion__content 
-                  h6 Заголовок
-                  p Текст. Имеется спорная точка зрения, гласящая примерно следующее: стремящиеся вытеснить традиционное производство, нанотехнологии объективно рассмотрены соответствующими инстанциями.
-                  ol 
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                .accordion__caption 
-                  span Вопрос
-                  img(src="../img/svg/expand_more.svg" alt="")
-                .accordion__content 
-                  h6 Заголовок
-                  p Текст. Имеется спорная точка зрения, гласящая примерно следующее: стремящиеся вытеснить традиционное производство, нанотехнологии объективно рассмотрены соответствующими инстанциями.
-                  ol 
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                .accordion__caption 
-                  span Вопрос
-                  img(src="../img/svg/expand_more.svg" alt="")
-                .accordion__content 
-                  h6 Заголовок
-                  p Текст. Имеется спорная точка зрения, гласящая примерно следующее: стремящиеся вытеснить традиционное производство, нанотехнологии объективно рассмотрены соответствующими инстанциями.
-                  ol 
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                .accordion__caption 
-                  span Вопрос
-                  img(src="../img/svg/expand_more.svg" alt="")
-                .accordion__content 
-                  h6 Заголовок
-                  p Текст. Имеется спорная точка зрения, гласящая примерно следующее: стремящиеся вытеснить традиционное производство, нанотехнологии объективно рассмотрены соответствующими инстанциями.
-                  ol 
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                .accordion__caption 
-                  span Вопрос
-                  img(src="../img/svg/expand_more.svg" alt="")
-                .accordion__content 
-                  h6 Заголовок
-                  p Текст. Имеется спорная точка зрения, гласящая примерно следующее: стремящиеся вытеснить традиционное производство, нанотехнологии объективно рассмотрены соответствующими инстанциями.
-                  ol 
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-                    li Список
-          .article__card.back-dots.back-dots--3 
-            .article__card-wrapper._container
-              img(src="img/card/pic1.png" alt="")
-              .article__card-col 
-                h2 Терехова Светлана Владимировна
-                .article__card-subtitle Заведующая отделением
-                ul 
-                  li Кандидат медицинских наук
-                  li Врач-онколог высшей квалификационной категории
-                  li Окончила Курский государственный медицинский университет по специальности "Лечебное дело"
-                  li Год выдачи документа об образовании: 2003
-                  li Имеет сертификат специалиста по специальности: Онкология. Дата выдачи: 18.11.2021 (срок действия - 5 лет)
+block main 
+    .page
+        ._container 
+            .breadcrumbs 
+                a(href="") Предыдущий ЛВЛ крошка 
+            section.main-banner
+                h1 h1 Здоровое питание: ключ к укреплению иммунной системы и общему благополучию
 
-          .article__block._container
-            h2 Заголовок 
-            .services__content 
-              .services__grid.grid.wrap 
-                .services__item.grid__item.box
-                  .services__title Поликлиническое отделение
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Отделение анестезиологии-реанимации
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Онкологическое абдоминальное отделение
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Онкологическое отделение опухолей молочной железы
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Онкологическое отделение опухолей головы и шеи
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Онкологическое отделение торакальнои хирургии
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Отделение онкогинекологии
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Отделение онкоурологии
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Химиотерапевтическое отделение 1
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Химиотерапевтическое отделение 2
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Радиологическое отделение
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Отделение опухолей костей, кожи, мягких тканей
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Центр лучевой диагностики
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Эндоскопическое отделение
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Операционное отделение
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Приемное отделение
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  .services__title Отделение функциональной диагностики и кардио-терапевтической помощи
-                  p.services__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta molestiae vitae! Dicta libero facilis blanditiis. Atque laboriosam sunt rem velit iure dolorum corporis, corrupti quia laudantium eligendi nisi numquam fugiat aspernatur quae harum molestias, alias, provident deserunt. Autem natus deserunt error reprehenderit eius quibusdam soluta voluptatem dignissimos nam tempora?
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .box-spacer
+            section
+                .block-picture.block-picture--mode.block-color 
+                    .block-picture__pic.block-picture__pic--border 
+                        img(src="img/images/pic1.jpg" alt="")
+                    .block-picture__col 
+                        span.block-picture__label ОКУШЕР-ГИНЕКОЛОГ
+                        h2.block-picture__title Анна Иванова Ивановна Васильевна Петровна
+                        p Специалист по акушерству и гинекологии в медицинском центре. С долголетней практикой и заботой о здоровье женщин, доктор Иванова стремится предоставить самый высокий уровень медицинского обслуживания и индивидуального подхода к каждой пациентке.
+                        .block-info__bottom
+                            button.btn Добавить в запись
+                            .block-info__row
+                                p Первичный приём — 1 500 ₽
+                                p Повторный — 1 100 ₽
 
-      include modules/footer
-    include modules/script
+
+                .block-info.block-color
+                    .block-info__inner 
+                        p.strong Если у вас возникли вопросы или вам требуется медицинская помощь в области акушерства и гинекологии, не стесняйтесь обратиться к доктору Анне Ивановой. Она будет рада приветствовать вас в своей практике и помочь вам достичь оптимального здоровья и благополучия.
+                        .block-info__bottom
+                            button.btn Добавить в запись
+                            .block-info__row
+                                p Первичный приём — 1 500 ₽
+                                p Повторный — 1 100 ₽
+
+                .content-block.block-info.block-color
+                    .block-info__inner 
+                        p.strong Если у вас возникли вопросы или вам требуется медицинская помощь в области акушерства и гинекологии, не стесняйтесь обратиться к доктору Анне Ивановой. Она будет рада приветствовать вас в своей практике и помочь вам достичь оптимального здоровья и благополучия.
+                        .block-info__bottom.block-info__bottom--mode
+                            button.btn Записаться
+                            .block-info__row
+                                span от 1 500 ₽ 
+
+                .content-block.shedule    
+                    h3.shedule__title Расписание
+                    .shedule__inner 
+                        .shedule__item 
+                            span.shedule__name Пн
+                            .shedule__bottom 
+                                span 31 февраля
+                                span С 11.00 до 16.00                    
+                        .shedule__item 
+                            span.shedule__name Вт
+                            .shedule__bottom 
+                                span 31 февраля
+                                span С 11.00 до 16.00                    
+                        .shedule__item 
+                            span.shedule__name Ср
+                            .shedule__bottom 
+                                span 31 февраля
+                                span С 11.00 до 16.00                    
+                        .shedule__item 
+                            span.shedule__name Чт
+                            .shedule__bottom 
+                                span 31 февраля
+                                span С 11.00 до 16.00                    
+                        .shedule__item 
+                            span.shedule__name Пт
+                            .shedule__bottom 
+                                span 31 февраля
+                                span С 11.00 до 16.00                    
+                        .shedule__item 
+                            span.shedule__name.shedule__name--mode Сб
+                            .shedule__bottom 
+                                span 31 февраля
+                                span С 11.00 до 16.00                    
+                        .shedule__item 
+                            span.shedule__name.shedule__name--mode Вс
+                            .shedule__bottom 
+                                span 31 февраля
+                                span С 11.00 до 16.00
+
+                .content-block.shedule    
+                    h3.shedule__title 
+                        span Расписание
+                    .shedule__inner 
+                        .shedule__item 
+                            span.shedule__name Пн
+                            .shedule__bottom 
+                                span 31 февраля
+                                span С 11.00 до 16.00                    
+                        .shedule__item 
+                            span.shedule__name Вт
+                            .shedule__bottom 
+                                span 31 февраля
+                                span С 11.00 до 16.00                    
+                        .shedule__item 
+                            span.shedule__name Ср
+                            .shedule__bottom 
+                                span 31 февраля
+                                span С 11.00 до 16.00 
+                        .shedule__item 
+                            span.shedule__name Пт
+                            .shedule__bottom 
+                                span 31 февраля
+                                span С 11.00 до 16.00  
+                ._inner
+                    .content-block 
+                        p.strong Короткое содержание: В этой статье рассмотрим важность правильного питания для укрепления иммунной системы и поддержания общего здоровья. Мы узнаем, какие продукты и питательные вещества особенно полезны для иммунитета, и как они способствуют борьбе с инфекциями и заболеваниями. Мы также обсудим роль балансированного рациона и здоровых привычек в поддержании оптимального состояния иммунной системы.
+
+                    .content-block 
+                        h3 Заголовок 3 уровня: Питание и иммунитет: неразрывная связь
+                        p Многие из нас стремятся к здоровой и счастливой жизни. Однако, чтобы достичь этой цели, необходимо активно заботиться о своём здоровье. Важную роль в этом процессе играет самообслуживание — комплекс мер и действий, направленных на поддержание физического и психологического благополучия. В этой статье мы рассмотрим, как правильное самообслуживание помогает нам сохранять здоровье и предотвращать различные заболевания.
+                        figure 
+                            img(src="img/images/pic2.jpg" alt="")
+                            figcaption Сабтайтл автора, фото, даты. Например - Хиппократ. 1992 год.
+                    .content-block 
+                        h4 Заголовок 4 уровня: Витамин С: мощный стимулятор иммунитета
+                        p Одним из ключевых аспектов самообслуживания является правильное питание. Наше тело нуждается в разнообразных питательных веществах, чтобы функционировать наилучшим образом. Включение в рацион свежих фруктов и овощей, злаковых продуктов, белковых и жирных кислот, а также ограничение потребления процессированных продуктов и сахара помогут нам достичь оптимального здоровья.
+
+                    .content-block 
+                        h5 Заголовок 5 уровня: Витамин С: мощный стимулятор иммунитета
+                        p Регулярная физическая активность также является неотъемлемой частью самообслуживания. Она укрепляет наши мышцы и кости, повышает выносливость, снижает риск сердечно-сосудистых заболеваний и помогает нам поддерживать здоровый вес. Будь то занятия в спортзале, прогулки на свежем воздухе или йога, выберите активности, которые вам нравятся, и включите их в свою повседневную жизнь.
+
+                        .quote 
+                            p.strong «Здоровье — это наше богатство, и питание — его страж. Включение в рацион свежих фруктов и овощей, злаковых продуктов, белковых и жирных кислот, а также ограничение потребления процессированных продуктов и сахара помогут нам достичь оптимального здоровья».
+                            span.quote__label Сабтайтл автора, например - Хиппократ. 1992 год.
+                        p Однако, не стоит забывать и о психологическом благополучии. Стресс, тревога и плохое настроение могут оказывать негативное влияние на наше здоровье. Поэтому важно обращать внимание на своё эмоциональное состояние и применять методы управления стрессом, такие как медитация, глубокое дыхание или занятия хобби. Поддерживайте равновесие между работой и отдыхом, общайтесь с близкими людьми и уделяйте время для себя.
+
+                    .content-block 
+                        h5 Заголовок 5 уровня: Цинк и селен: незаменимые помощники иммунной системы
+                        p Однако, не стоит забывать и о психологическом благополучии. Стресс, тревога и плохое настроение могут оказывать негативное влияние на наше здоровье. Поэтому важно обращать внимание на своё эмоциональное состояние и применять методы управления стрессом, такие как медитация, глубокое дыхание или занятия хобби. Поддерживайте равновесие между работой и отдыхом, общайтесь с близкими людьми и уделяйте время для себя.
+
+                    .content-block 
+                        ol 
+                            li Цинк и селен: незаменимые помощники иммунной системы
+                            li Омега-3 жирные кислоты: защита и поддержка иммунитета
+                            li Здоровый рацион: основа для сильной иммунной системы
+                            li Сбалансированное питание: гармония для иммунитета
+                            li Регулярность и разнообразие: ключевые принципы питания
+                            li Здоровые привычки для укрепления иммунитета
+                            li Физическая активность: энергия для иммунной системы
+
+                    .content-block 
+                        p Однако, не стоит забывать и о психологическом благополучии. Стресс, тревога и плохое настроение могут оказывать негативное влияние на наше здоровье. Поэтому важно обращать внимание на своё эмоциональное состояние и применять методы управления стрессом, такие как медитация, глубокое дыхание или занятия хобби. Поддерживайте равновесие между работой и отдыхом, общайтесь с близкими людьми и уделяйте время для себя.
+
+                    .content-block 
+                        ul 
+                            li Цинк и селен: незаменимые помощники иммунной системы
+                            li Омега-3 жирные кислоты: защита и поддержка иммунитета
+                            li Здоровый рацион: основа для сильной иммунной системы
+                            li Сбалансированное питание: гармония для иммунитета
+                            li Регулярность и разнообразие: ключевые принципы питания
+                            li Здоровые привычки для укрепления иммунитета
+                            li Физическая активность: энергия для иммунной системы
+
+                    .content-block 
+                        p.strong Короткое содержание: В этой статье рассмотрим важность правильного питания для укрепления иммунной системы и поддержания общего здоровья. Мы узнаем, какие продукты и питательные вещества особенно полезны для иммунитета, и как они способствуют борьбе с инфекциями и заболеваниями. Мы также обсудим роль балансированного рациона и здоровых привычек в поддержании оптимального состояния иммунной системы.
+
+            section 
+                h2 
+                    span Ещё новость
+                    a(href="")  
+                        span Все новости
+                        img(src="img/icons/icn_m_arrow_forward.svg" alt="")
+                .news-carousel.swiper
+                    .swiper-wrapper 
+                        .swiper-slide 
+                            .news-carousel__slide
+                                img(src="img/images/pic3.jpg" alt="")
+                                .date 22.02.2022
+                                p Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной)
+                        .swiper-slide 
+                            .news-carousel__slide
+                                img(src="img/images/pic3.jpg" alt="")
+                                .date 22.02.2022
+                                p Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной)                        
+                        .swiper-slide 
+                            .news-carousel__slide
+                                img(src="img/images/pic3.jpg" alt="")
+                                .date 22.02.2022
+                                p Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной) 
+
+            section
+                h2 
+                    span Отзывы
+                    a(href="specialists.html")  
+                        span Все отзывы
+                        img(src="img/icons/icn_m_arrow_forward.svg" alt="")
+                .reviews-block-carousel.swiper 
+                    .swiper-wrapper 
+                        .swiper-slide 
+                            .reviews-block-carousel__slide.block-color 
+                                h4.reviews-block-carousel__title Нафанаил
+                                p Доктор Лебедева — истинный профессионал с золотыми руками. Я обратился к ней с проблемой кожного заболевания, и она смогла найти эффективное решение. Её диагностические навыки и опыт позволили ей точно определить причину проблемы и предложить индивидуальное лечение.
+                                p Она также проявила глубокое понимание моих эмоциональных потребностей и была очень терпелива, отвечая на все мои вопросы. Я очень благодарен доктору Лебедевой и с уверенностью рекомендую её как высококвалифицированного специалиста в своей области.
+                        .swiper-slide 
+                            .reviews-block-carousel__slide.block-color 
+                                h4.reviews-block-carousel__title Нафанаил
+                                p Доктор Лебедева — истинный профессионал с золотыми руками. Я обратился к ней с проблемой кожного заболевания, и она смогла найти эффективное решение. Её диагностические навыки и опыт позволили ей точно определить причину проблемы и предложить индивидуальное лечение.
+                        .swiper-slide 
+                            .reviews-block-carousel__slide.block-color 
+                                h4.reviews-block-carousel__title Нафанаил
+                                p Доктор Лебедева — истинный профессионал с золотыми руками. Я обратился к ней с проблемой кожного заболевания, и она смогла найти эффективное решение. Её диагностические навыки и опыт позволили ей точно определить причину проблемы и предложить индивидуальное лечение.
+                        .swiper-slide 
+                            .reviews-block-carousel__slide.block-color 
+                                h4.reviews-block-carousel__title Нафанаил
+                                p Доктор Лебедева — истинный профессионал с золотыми руками. Я обратился к ней с проблемой кожного заболевания, и она смогла найти эффективное решение. Её диагностические навыки и опыт позволили ей точно определить причину проблемы и предложить индивидуальное лечение.
+                                p Она также проявила глубокое понимание моих эмоциональных потребностей и была очень терпелива, отвечая на все мои вопросы. Я очень благодарен доктору Лебедевой и с уверенностью рекомендую её как высококвалифицированного специалиста в своей области.
+                        .swiper-slide 
+                            .reviews-block-carousel__slide.block-color 
+                                h4.reviews-block-carousel__title Нафанаил
+                                p Доктор Лебедева — истинный профессионал с золотыми руками. Я обратился к ней с проблемой кожного заболевания, и она смогла найти эффективное решение. Её диагностические навыки и опыт позволили ей точно определить причину проблемы и предложить индивидуальное лечение.
+                        .swiper-slide 
+                            .reviews-block-carousel__slide.block-color 
+                                h4.reviews-block-carousel__title Нафанаил
+                                p Доктор Лебедева — истинный профессионал с золотыми руками. Я обратился к ней с проблемой кожного заболевания, и она смогла найти эффективное решение. Её диагностические навыки и опыт позволили ей точно определить причину проблемы и предложить индивидуальное лечение.
+                    .swiper-pagination
+
+            section
+                .gallery 
+                    h2.gallery__title Галлерея
+                    .gallery__wrapper 
+                        .gallery__inner.gallery__inner--overlay
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                        span#galleryShow.gallery__btn Развернуть    
+                            img(src="img/icons/icn_m_arrow_drop_down_blue.svg" alt="")
+
+            section
+                .gallery 
+                    h2.gallery__title Галлерея
+                    .gallery__wrapper 
+                        .gallery__inner
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+
+
+            section
+                .gallery 
+                    h2.gallery__title Галлерея
+                    .gallery__wrapper 
+                        .gallery__inner
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")
+                            .item
+                                img(src="img/gallery/item1.jpg" alt="")

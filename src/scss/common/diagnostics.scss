@@ -1,0 +1,33 @@
+.diagnostics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+  .item__pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #2D83B6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .item {
+    padding: 32px 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    h4 {
+      margin: 0;
+    }
+  }
+  @media (max-width: 1919px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 1279px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}

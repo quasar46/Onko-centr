@@ -1,0 +1,18 @@
+.mCSB_scrollTools .mCSB_draggerContainer {
+  width: 4px;
+  background: #74c3f2;
+  border-radius: 10px;
+}
+
+.mCSB_dragger_bar {
+  width: 8px !important;
+  // height: 40px !important;
+  border-radius: 10px !important;
+  background: #015c93 !important;
+  left: 50%;
+  transform: translateX(-48%);
+}
+
+.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail {
+  display: none;
+}

@@ -1,0 +1,119 @@
+.news-block {
+  .swiper-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "item1 item2"
+      "item1 item3"
+      "item1 item4";
+    grid-gap: 16px;
+    .item--1 {
+      grid-area: item1;
+    }
+    .item--2 {
+      grid-area: item2;
+    }
+    .item--3 {
+      grid-area: item3;
+    }
+    .item--4 {
+      grid-area: item4;
+    }
+    .item {
+      gap: 16px;
+      .date {
+        @media (max-width: 1279px) {
+          order: -1;
+        }
+      }
+    }
+    .item__pic {
+      border-radius: 8px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      @media (max-width: 1279px) {
+        height: 192px;
+      }
+    }
+    .item:first-child {
+      display: flex;
+      flex-direction: column;
+      .item__col {
+        padding-right: 64px;
+      }
+      .date {
+        order: -1;
+      }
+    }
+    .item:not(:first-child) {
+      display: flex;
+      flex-direction: row;
+      .item__pic {
+        max-width: 388px;
+        width: 100%;
+        flex: 1 0 auto;
+        height: 100%;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+        @media (max-width: 1919px) {
+          max-width: 268px;
+        }
+        @media (max-width: 1279px) {
+          max-width: 348px;
+          height: 192px;
+        }
+      }
+      p {
+        display: none;
+      }
+      @media (max-width: 1279px) {
+        flex-direction: column;
+      }
+    }
+    .item__col {
+      display: flex;
+      flex-direction: column;
+      a {
+        transition: color .3s ease;
+        &:hover {
+          color: #0B6FAB;
+          transition: color .3s ease;
+        }
+      }
+      p {
+        @media (max-width: 1279px) {
+          display: none;
+        }
+      }
+    }
+    .swiper-slide {
+      @media (max-width: 1279px) {
+        width: 348px;
+      }
+    }
+    @media (max-width: 1279px) {
+      display: flex;
+    }
+  }
+  .swiper-slide {
+    .item__pic {
+      height: 100%;
+    }
+    &:first-child {
+      .item__pic {
+        @media (max-width: 1280px) {
+          // height: 400px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1279px) {
+    padding-bottom: 65px;
+  }
+}

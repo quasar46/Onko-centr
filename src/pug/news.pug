@@ -1,121 +1,62 @@
-doctype html
-html(lang="ru")
-  include modules/head
-  body
-    .wrapper
-      include modules/burger-inner
-      include modules/header
-      .page 
-        .breadcrumbs._container
-          a(href="") Главная 
-          span 
-          a(href="") Новости
-          span 
-          a.active Новости
-        section.newsback-dots.back-dots.back-dots--5 
-          .news__wrapper._container 
-            .block-head 
-              h1.title Новости
-            .news__head.news-head 
-              .news-head__item 
-                .news-head__pic
-                  img(src="img/news/pic3.png" alt="")
-                .news-head__col   
-                  .news-head__date 27.09.2022
-                  a(href="").news-head__text Уважаемые <br>пациенты!
-            .news__catalog.news-catalog 
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news1.png" alt="")
-                .news-catalog__date 09.08.2022
-                a(href="").news-catalog__text Приглашаем вас принять участие в конференции «Преемственность в онкологии: от диагностики к лечению»
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news2.png" alt="")
-                .news-catalog__date 27.09.2022
-                a(href="").news-catalog__text Уважаемые пациенты!
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news1.png" alt="")
-                .news-catalog__date 09.08.2022
-                a(href="").news-catalog__text Приглашаем вас принять участие в конференции «Преемственность в онкологии: от диагностики к лечению»
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news2.png" alt="")
-                .news-catalog__date 27.09.2022
-                a(href="").news-catalog__text Уважаемые пациенты!
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news1.png" alt="")
-                .news-catalog__date 09.08.2022
-                a(href="").news-catalog__text Приглашаем вас принять участие в конференции «Преемственность в онкологии: от диагностики к лечению»
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news2.png" alt="")
-                .news-catalog__date 27.09.2022
-                a(href="").news-catalog__text Уважаемые пациенты!
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news1.png" alt="")
-                .news-catalog__date 09.08.2022
-                a(href="").news-catalog__text Приглашаем вас принять участие в конференции «Преемственность в онкологии: от диагностики к лечению»
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news2.png" alt="")
-                .news-catalog__date 27.09.2022
-                a(href="").news-catalog__text Уважаемые пациенты!
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news1.png" alt="")
-                .news-catalog__date 09.08.2022
-                a(href="").news-catalog__text Приглашаем вас принять участие в конференции «Преемственность в онкологии: от диагностики к лечению»
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news2.png" alt="")
-                .news-catalog__date 27.09.2022
-                a(href="").news-catalog__text Уважаемые пациенты!
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news1.png" alt="")
-                .news-catalog__date 09.08.2022
-                a(href="").news-catalog__text Приглашаем вас принять участие в конференции «Преемственность в онкологии: от диагностики к лечению»
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news2.png" alt="")
-                .news-catalog__date 27.09.2022
-                a(href="").news-catalog__text Уважаемые пациенты!
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news1.png" alt="")
-                .news-catalog__date 09.08.2022
-                a(href="").news-catalog__text Приглашаем вас принять участие в конференции «Преемственность в онкологии: от диагностики к лечению»
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news2.png" alt="")
-                .news-catalog__date 27.09.2022
-                a(href="").news-catalog__text Уважаемые пациенты!
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news1.png" alt="")
-                .news-catalog__date 09.08.2022
-                a(href="").news-catalog__text Приглашаем вас принять участие в конференции «Преемственность в онкологии: от диагностики к лечению»
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news2.png" alt="")
-                .news-catalog__date 27.09.2022
-                a(href="").news-catalog__text Уважаемые пациенты!
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news1.png" alt="")
-                .news-catalog__date 09.08.2022
-                a(href="").news-catalog__text Приглашаем вас принять участие в конференции «Преемственность в онкологии: от диагностики к лечению»
-              .news-catalog__item
-                .news-catalog__pic 
-                  img(src="img/news2.png" alt="")
-                .news-catalog__date 27.09.2022
-                a(href="").news-catalog__text Уважаемые пациенты!
-            button.btn-default.btn-default--notuppercase.btn-default--center Показать ещё
-            include modules/pagination
-            
-      include modules/footer
-    include modules/script
+extends templates/layout
+
+block main 
+  .page
+    ._container 
+      .breadcrumbs 
+        a(href="") Предыдущий ЛВЛ крошка 
+      section.main-banner
+        h1 Новости/статьи/акции
+      section.news 
+        .news__inner
+          a(href="").item 
+            .item__pic 
+              img(src="img/images/pic7.jpg", alt="")
+            .date 22.02.2022
+            h5 Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной)
+          a(href="").item 
+            .item__pic 
+              img(src="img/images/pic7.jpg", alt="")
+            .date 22.02.2022
+            h5 Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной)
+          a(href="").item 
+            .item__pic 
+              img(src="img/images/pic7.jpg", alt="")
+            .date 22.02.2022
+            h5 Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной)
+          a(href="").item 
+            .item__pic 
+              img(src="img/images/pic7.jpg", alt="")
+            .date 22.02.2022
+            h5 Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной)
+          a(href="").item 
+            .item__pic 
+              img(src="img/images/pic7.jpg", alt="")
+            .date 22.02.2022
+            h5 Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной)
+          a(href="").item 
+            .item__pic 
+              img(src="img/images/pic7.jpg", alt="")
+            .date 22.02.2022
+            h5 Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной)
+          a(href="").item 
+            .item__pic 
+              img(src="img/images/pic7.jpg", alt="")
+            .date 22.02.2022
+            h5 Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной)
+          a(href="").item 
+            .item__pic 
+              img(src="img/images/pic7.jpg", alt="")
+            .date 22.02.2022
+            h5 Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной)
+          a(href="").item 
+            .item__pic 
+              img(src="img/images/pic7.jpg", alt="")
+            .date 22.02.2022
+            h5 Верстаем эт карточки из news-special. Только теперь из 3 а не 1 (как на главной)
+        .pagination 
+          a.active 1
+          a 2
+          a 3
+          a ...
+          a 99

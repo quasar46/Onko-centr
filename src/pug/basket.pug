@@ -1,0 +1,98 @@
+extends templates/layout
+
+block main 
+  .page
+    ._container 
+      .breadcrumbs 
+        a(href="") Предыдущий ЛВЛ крошка
+
+      section.main-banner
+        h1 Корзина
+
+      section
+        .basket-table 
+          .basket-table__head
+            .row
+              .col 
+                span Наименование услуги
+              .col 
+                span Цена
+              .col 
+
+          .basket-table__body
+            .row
+              .col 
+                a(href="")  Название с которого можно провалиться в описание анализа. Сам текст - ссылка
+              .col 
+                span 1500 ₽
+              .col 
+                img(src="img/icons/icn_m_delete_forever-red.svg" alt="")
+            .row
+              .col 
+                a Название с которого можно провалиться в описание анализа. Сам текст - ссылка
+              .col 
+                span 1500 ₽
+              .col 
+                img(src="img/icons/icn_m_delete_forever-red.svg" alt="")
+            .row
+              .col 
+                a(href="")  Название с которого можно провалиться в описание анализа. Сам текст - ссылка
+              .col 
+                span 1500 ₽
+              .col 
+                img(src="img/icons/icn_m_delete_forever-red.svg" alt="")
+
+          .basket-table__footer
+            .basket-table__footer-row 
+              span Сумма к оплате: 
+              span.basket-table__price 9000 ₽
+            .basket-table__footer-row
+              p  Сумма может быть пересчитана в меньшую сторону, если приём у врача - повторный.  Оплата производится в медицинском центре по факту оказанных услуг
+
+        .lk.lk__recovery
+          .lk__wrapper 
+            .lk__head
+              h3 Оформление записи
+            ul.lk__reg 
+              li.lk__row.lk__row--calendar
+                label(for="") Желаемый день записи
+                .lk__input.calendar
+                  input(type="text" placeholder="Выберите дату" id="datepicker")
+              li.lk__row.lk__row--time
+                label(for="") Удобное время записи
+                .lk__input.lk__select.select
+                  select.js-example-basic-multiple
+                    option(value="10.00 - 11.00") 10.00 - 11.00
+                    option(value="11.00 - 12.00") 11.00 - 12.00
+                    option(value="12.00 - 13.00") 12.00 - 13.00
+                    option(value="13.00 - 14.00") 13.00 - 14.00
+                    option(value="14.00 - 15.00") 14.00 - 15.00
+              li.lk__row.lk__row--calendar
+                label(for="") Телефон
+                input(type="password" placeholder="Email")
+              li.lk__row.lk__row--time
+                label(for="") Ваше имя
+                input(type="password" placeholder="Email")
+            ul
+              li.lk__flex
+                .capcha.capcha--mobile
+                  img(src="img/capcha.png" alt="")
+                .lk__row 
+                  label(for="") Введите текст с картинки
+                  input(type="text" placeholder="Текст с картинки (если нужна капча)") 
+                .capcha
+                  img(src="img/capcha.png" alt="")
+              li.checks.lk__checks
+                ul 
+                  li
+                    input(type="checkbox" id="check1")
+                    label(for="check1") Согласен с политикой обработки персональных данных
+                  li
+                    input(type="checkbox" id="check2")
+                    label(for="check2") Согласен с политикой конфиденциальности
+
+
+
+            .lk__btns 
+              button.btn Отправить заявку
+

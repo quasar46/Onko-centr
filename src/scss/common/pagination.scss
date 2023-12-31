@@ -1,21 +1,20 @@
 .pagination {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 24px;
-  width: 100%;
+  margin-top: 48px;
   a {
-    padding: 0 16px;
-    height: 39px;
-    border-radius: 4px;
-    color: #2f5372;
-    font-size: 18px;
-    font-weight: 500;
+    width: 48px;
+    height: 47px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #2D83B6;
+    font-size: 18px;
+    font-weight: 600;
     cursor: pointer;
     &.active {
-      background-color: #2f5372;
+      background-color: #2D83B6;
       color: white;
     }
   }

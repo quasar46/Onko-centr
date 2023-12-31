@@ -1,0 +1,25 @@
+extends templates/layout
+
+block main 
+  .page
+    ._container 
+      section.lk 
+        .lk__wrapper 
+          .lk__head
+            h2 Восстановление пароля
+            p.strong Введите свой адрес электронной почты и мы отправим вам инструкцию по восстановлению пароля
+          ul 
+            li.lk__row 
+              label(for="") Электронная почта
+              input(type="email" placeholder="Email")
+            li.lk__flex
+              .lk__capcha.lk__capcha--mobile
+                  img(src="img/capcha.png" alt="")
+              .lk__row 
+                label(for="") Введите текст с картинки
+                input(type="text" placeholder="Текст с картинки (если нужна капча)") 
+              .lk__capcha
+                img(src="img/capcha.png" alt="")
+            li.lk__btns 
+              button.btn Восстановить пароль
+              button.btn4 Войти

@@ -1,0 +1,9 @@
+.block-color {
+  padding: 48px 56px;
+  background-color: #F4FBFF;
+  border-radius: 8px;
+  border: 1px solid #74C3F2;
+  @media (max-width: 767px) {
+    padding: 32px 24px;
+  }
+}

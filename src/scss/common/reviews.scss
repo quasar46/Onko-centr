@@ -1,0 +1,6 @@
+.reviews {
+  width: 100%;
+  .block-info:not(:first-child) {
+    margin-bottom: 16px;
+  }
+} 

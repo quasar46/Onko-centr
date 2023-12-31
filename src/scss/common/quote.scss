@@ -1,0 +1,28 @@
+.quote {
+  padding-left: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0;
+  &::before {
+    content:"";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: #53A6D8;
+    padding-bottom: 33px;
+    left: 0;
+  }
+  @media (max-width: 767px) {
+    padding-left: 16px;
+  }
+}
+
+.quote__label {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--main-blue);
+  text-align: right;
+}

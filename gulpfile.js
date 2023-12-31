@@ -26,6 +26,12 @@ gulp.task("pug", function () {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("media", function() {
+  return gulp
+    .src("src/*.mp4")
+    .pipe(gulp.dest("build"))
+})
+
 gulp.task("css", function () {
   return gulp
     .src("src/scss/styles.scss")
@@ -122,5 +128,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "fonts", "css", "img", "pug", "js"));
+gulp.task("build", gulp.series("clean", "fonts", "css", "img", "pug", "media", "js"));
 gulp.task("start", gulp.series("build", "server"));

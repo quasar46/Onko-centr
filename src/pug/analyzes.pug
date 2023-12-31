@@ -1,0 +1,366 @@
+extends templates/layout
+
+block main 
+  .page
+    ._container 
+      .breadcrumbs 
+        a(href="") Предыдущий ЛВЛ крошка
+      section.main-banner
+        h1 Анализы
+      section.analyzes
+        ._inner
+          p.strong Мы рады предложить вам широкий спектр лабораторных анализов, которые помогут вам получить важные данные о вашем здоровье. Чтобы сделать процесс максимально удобным для вас, мы принимаем анализы ежедневно с 08.00 до 12.00.
+
+
+        .analyzes__inner 
+          .analyzes__mobile 
+            .filter__block 
+              button.filter__title Категории анализов
+              .filter__top
+                .filter__popular.categoriiBtn
+                  img(src="img/icons/icn_m_format_list.svg" alt="")
+                  span Популярные анализы
+                  img(src="img/icons/icn_m_arrow_forward.svg" alt="")
+                .filter__top-bottom
+                  button.btn2.filter__show#filterShow Показать фильтр
+                  .filter__search 
+                    img(src="img/icons/icn_L_search.svg", alt="")
+                  .filter-search 
+                    button.close-modal
+                      img(src="img/icons/icn_m_close-black.svg", alt="")
+                    h3 Поиск
+                    .input
+                      input(type="text" placeholder="Название, или код анализа")
+                    button.btn Найти
+
+          .analyzes__content 
+            h4 Комплексные решения
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+            a(href="").item 
+              .item__top 
+                .item__row
+                  .subtitle Комплекс 
+                  span.item__number 40-615
+                .item__row 
+                  .item__name 4 обязательных анализа
+                  .item__price 1190 ₽
+              .item__bottom 
+                .item__time
+                  img(src="img/icons/icn_m_wait.svg" alt="")
+                  p.item__descr 2 суток. В случае возникновения необходимости выполнения дополнительного теста, срок выполнения исследования может составить до 7 суток
+                button.btn Заказать
+
+
+          .analyzes__filter.filter
+            button.close-modal
+              img(src="img/icons/icn_m_close-black.svg", alt="")
+            h3.analyzes__tilte Фильтр
+            .filter__bottom-mobile
+              button.btn Применить
+              button.btn3 Сбросить все фильтры
+            .filter__block-wrap.mycustom-scroll(data-mcs-theme="3d-dark")
+              .filter__block
+                .filter__title Поиск
+                input(type="text" placeholder="Название, или код анализа")
+                button.btn Найти
+              .filter__block 
+                button.filter__title Категории анализов
+                .filter__popular.categoriiBtn 
+                  img(src="img/icons/icn_m_format_list.svg" alt="")
+                  span Популярные анализы
+                  img(src="img/icons/icn_m_arrow_forward.svg" alt="")
+                .filter__reset
+                  span Сбросить все фильтры
+                  img(src="img/icons/icn_m_close.svg" alt="")
+              .filter__block.filter__gender
+                .checks 
+                  ul
+                    li
+                      input(type="checkbox" id="check1")
+                      label(for="check1") Женщины
+                    li
+                      input(type="checkbox" id="check2")
+                      label(for="check2") Дети
+                    li
+                      input(type="checkbox" id="check3")
+                      label(for="check3") Мужчины
+              .filter__block 
+                .filter__title По органам и системам
+                .filter__checks.checks 
+                  ul 
+                    li
+                      input(type="checkbox" id="input1")
+                      label(for="input1") Сердце и сосуды
+                    li
+                      input(type="checkbox" id="input2")
+                      label(for="input2") Щитовидная железа
+                    li
+                      input(type="checkbox" id="input3")
+                      label(for="input3") Печень
+                    li
+                      input(type="checkbox" id="input4")
+                      label(for="input4") Почки
+                    li
+                      input(type="checkbox" id="input5")
+                      label(for="input5") Кишечник
+                    li
+                      input(type="checkbox" id="input6")
+                      label(for="input6") Женская репродуктивная система
+                    li
+                      input(type="checkbox" id="input7")
+                      label(for="input7") Мужская репродуктивная система
+                    li
+                      input(type="checkbox" id="input8")
+                      label(for="input8") Поджелудочная железа
+
+              .filter__block 
+                .filter__title По заболеваниям
+                .filter__checks.checks 
+                  ul 
+                    li
+                      input(type="checkbox" id="input9")
+                      label(for="input9") Сердце и сосуды
+                    li
+                      input(type="checkbox" id="input10")
+                      label(for="input10") Щитовидная железа
+                    li
+                      input(type="checkbox" id="input11")
+                      label(for="input11") Печень
+                    li
+                      input(type="checkbox" id="input12")
+                      label(for="input12") Почки
+                    li
+                      input(type="checkbox" id="input13")
+                      label(for="input13") Кишечник
+                    li
+                      input(type="checkbox" id="input14")
+                      label(for="input14") Женская репродуктивная система
+                    li
+                      input(type="checkbox" id="input15")
+                      label(for="input15") Мужская репродуктивная система
+                    li
+                      input(type="checkbox" id="input16")
+                      label(for="input16") Поджелудочная железа
+
+
+
+        .pagination 
+          a.active 1
+          a 2
+          a 3
+          a ...
+          a 99
+
+        .categorii 
+          h3 Категории анализов
+          button.close-modal 
+            img(src="img/icons/icn_m_close-black.svg", alt="")
+          //- .categorii__inner.mycustom-scroll(data-mcs-theme="3d-dark")
+          .categorii__inner
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы
+            a(href="") Популярные анализы

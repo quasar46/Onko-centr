@@ -1,0 +1,123 @@
+.analyzes {
+  .strong {
+    margin-bottom: 80px;
+    @media (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.analyzes__inner {
+  display: flex;
+  gap: 48px;
+  @media (max-width: 1279px) {
+    gap: 16px;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.analyzes__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1200px;
+  width: 100%;
+  flex: 1 0 auto;
+  .item {
+    padding: 24px 32px;
+    border-radius: 10px;
+    border: 2px solid #e9eff4;
+    &:hover {
+      border-color: #3797cf;
+    }
+    .item__top {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #e9eff4;
+    }
+    .item__bottom {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 16px;
+      @media (max-width:1279px) {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+    .item__row {
+      display: flex;
+      align-items: center;
+      &:nth-child(2) {
+        justify-content: space-between;
+      }
+    }
+    .item__number {
+      padding: 4px 12px;
+      border-radius: 3px;
+      border: 1px solid #74c3f2;
+      background: #f4fbff;
+    }
+    .item__name {
+      font-family: Manrope;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 140%;
+    }
+    .item__price {
+      font-family: Manrope;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 140%;
+    }
+    .item__time {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      img {
+        @media (max-width: 1279px) {
+          display: none;
+        }
+      }
+    }
+    .item__descr {
+      color: #687076;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 160%;
+    }
+    @media (max-width: 767px) {
+      padding: 24px;
+    }
+  }
+  @media (max-width: 1919px) {
+    max-width: 740px;
+  }
+  @media (max-width: 1279px) {
+    max-width: 480px;
+  }
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
+}
+
+.analyzes__mobile {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.analyzes__filter.active {
+  display: flex;
+  flex-direction: column;
+  .analyzes__tilte {
+    display: block;
+  }
+}
+
+.analyzes__tilte {
+  display: none;
+}

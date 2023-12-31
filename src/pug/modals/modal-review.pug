@@ -1,0 +1,42 @@
+.modal#modalReview
+  button.close-modal
+    img(src="img/icons/icn_m_close-black.svg" alt="")
+  h3 Оставить отзыв
+  form.modal-form(action="") 
+    ul.modal-form__inputs 
+      li.modal__row
+        label(for="") Как вас зовут?
+        input(type="text" placeholder="Ваше имя")
+      .modal__grid
+        li.modal__row
+          label(for="") Номер телефона
+          input(type="text" placeholder="+7 999 999 99 99")
+        li.modal__row
+          label(for="") Email
+          input(type="text" placeholder="example@email.ru")
+      li.modal__row
+        label(for="") Текст отзыва
+        textarea(placeholder="Ваш отзыв о враче, или медцентре")
+      li.modal__row 
+        .modal__file
+          input(type="file" id="file")
+          label(for="file") 
+            span.modal__file-icon 
+              img(src="img/icons/icn_L_attach_file_add.svg" alt="")
+            span.modal__file-text Перетащите сюда файл или выберите его  на устройстве
+      li.modal__row.modal__flex
+        .capcha.capcha--mobile
+          img(src="img/capcha.png" alt="")
+        .modal__col
+          label(for="") Введите текст с картинки
+          input(type="text")
+        .capcha
+          img(src="img/capcha.png" alt="")
+    ul.checks.modal__checks 
+      li
+        input(type="checkbox" id="check1") 
+        label(for="check1") Согласен с политикой обработки персональных данных
+      li
+        input(type="checkbox" id="check2")
+        label(for="check2") Согласен с политикой конфиденциальности
+    button.btn#btnSendReview Отправить

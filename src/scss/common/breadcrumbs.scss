@@ -1,35 +1,31 @@
 .breadcrumbs {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 50px;
-  width: 100%;
-  overflow: auto;
-  -ms-overflow-style: none; /* IE и Edge */
-  scrollbar-width: none; /* Firefox */
+  padding: 48px 0;
   a {
-    color: var(--color-grey-text);
-    white-space: nowrap;
-    &.active {
-      color: var(--color-blue-text);
+    position: relative;
+    color: var(--main-grey);
+    padding-left: 64px;
+    font-size: 24px;
+    font-weight: 500;
+    &::before {
+      content:"";
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 1px;
+      background-color: var(--main-grey);
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      @media (max-width: 767px) {
+        display: none;  
+      }
     }
-    &:hover:not(.active) {
-      color: #6B8FAE;
-      transition: 0.3s ease all;
+    @media (max-width: 767px) {
+      padding-left: 0; 
     }
   }
-  span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: var(--color-grey-text);
-  }
-  @media (max-width: 1279px) {
-    margin-bottom: 30px;
-  }
-  &::-webkit-scrollbar {
-    display: none;
+  @media (max-width: 767px) {
+    padding: 32px 0;
   }
 }

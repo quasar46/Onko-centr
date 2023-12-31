@@ -1,45 +1,19 @@
-.swiper-programs {
-  .swiper-slide {
-    background-color: rgba(27, 63, 94, 0.1);
-    border-radius: 8px;
-    padding: 30px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &:hover {
-      transition: all 0.3s ease;
-      background-color: rgba(47, 83, 114, 1);
-    }
-    @media (max-width: 1919px) {
-      padding: 15px 10px;
-    }
-  }
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #89CCF7;
+  opacity: 1;
 }
 
-.swiper-nav__programs {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  .button-swiper {
-    width: 52px;
-    height: 53px;
-    background-color: #1b3f5e;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    &:hover {
-      transition: all 0.3s ease;
-      background-color: #6b8fae;
-    }
-    @media (max-width: 1279px) {
-      width: 42px;
-      height: 43px;
-    }
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 8px;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 23px;
+  border-radius: 16px;
+  background-color: #2d83b6;
 }

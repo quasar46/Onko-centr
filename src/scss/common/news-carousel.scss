@@ -1,0 +1,36 @@
+.news-carousel__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  img {
+    margin-bottom: 16px;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    @media (max-width: 1919px) {
+      height: 260px;
+    }
+    @media (max-width: 1279px) {
+      height: 192px;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Craftwork Grotesk", sans-serif;
+  }
+ 
+}
+
+.news-carousel {
+  .swiper-slide {
+    @media (max-width: 1279px) {
+      width: 348px;
+    }
+  }
+  @media (max-width: 1279px) {
+    overflow: visible;
+  }
+}

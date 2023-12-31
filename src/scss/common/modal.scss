@@ -1,310 +1,238 @@
 .modal {
-  display: none;
-  // display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px;
-  &.active {
-    // display: flex;
-    display: block;
-    .modal__wrapper {
-      // top: 80px;
-      @media (max-width: 767px) {
-        // top: 40px;
-      }
-    }
-  }
-  .title {
-    font-size: 36px;
-    font-weight: 40;
-    color: rgba(0, 0, 24, 1);
-    text-align: center;
-    margin-bottom: 50px;
-    @media (max-width: 767px) {
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
-  }
-  @media (max-width: 767px) {
-    padding: 40px 10px;
-  }
-}
-
-.modal__wrapper {
-  background-color: white;
-  max-width: 1008px;
-  width: 100%;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  border-radius: 8px;
-  padding: 40px;
-  position: relative;
-  overflow-y: auto;
-  // height: 100%;
-  margin: auto;
-  .close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    cursor: pointer;
-  }
-  @media (max-width: 767px) {
-    padding: 30px 10px;
-    // height: 100%;
-  }
-  &--end {
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 60px;
-    .title {
-      margin-bottom: 0;
-    }
-    @media (max-width: 767px) {
-      height: auto;
-      padding: 40px;
-    }
-  }
-}
-
-.modal__inner {
-  .form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    @media (max-width: 767px) {
-      flex-direction: column;
-    }
-  }
-
-  .form__block {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 40px;
-    label {
-      font-size: 16px;
-      font-weight: 500;
-      color: rgba(0, 0, 24, 0.7);
-      @media (max-width: 767px) {
-        font-size: 14px;
-      }
-    }
-
-    // &:first-child,
-    // &:nth-child(4) {
-    //   width: 100%;
-    // }
-    // &:nth-child(2),
-    // &:nth-child(3) {
-    //   width: calc(50% - 10px);
-    //   @media (max-width: 767px) {
-    //     width: 100%;
-    //   }
-    // }
-    // &:nth-child(5) {
-    //   @media (max-width: 767px) {
-    //     width: 100%;
-    //   }
-    // }
-    // &:nth-child(6) {
-    //   width: 100%;
-    //   input {
-    //     max-width: 392px;
-    //   }
-    // }
-    &:nth-child(6) {
-      input {
-        @media (max-width: 767px) {
-          width: 100%;
-        }
-      }
-    }
-    input[type="checkbox"] {
-      position: absolute;
-      z-index: -1;
-      opacity: 0;
-    }
-    &--checks {
-      label {
-        font-weight: 400;
-        position: relative;
-        padding-left: 32px;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 24px;
-          height: 24px;
-          display: block;
-          border-radius: 4px;
-          border: 2px solid #dee2e5;
-          background-color: white;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          @media (max-width: 767px) {
-            width: 18px;
-            height: 18px;
-          }
-        }
-        @media (max-width: 767px) {
-          padding-left: 25px;
-          font-size: 12px;
-        }
-      }
-      input:checked + label::before {
-        background-color: var(--color-blue-text);
-        background-image: url("../img/svg/check_box.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        border-color: var(--color-blue-text);
-      }
-    }
-    input {
-      color: rgba(0, 0, 24, 0.5);
-    }
-    input::placeholder {
-      color: rgba(0, 0, 24, 0.5);
-    }
-    &.error {
-      input,
-      textarea {
-        outline: 1px solid #c11010;
-      }
-      &::before {
-        content: "Алерт";
-        position: absolute;
-        bottom: -30px;
-        left: 16px;
-        color: #c11010;
-        font-size: 16px;
-        font-weight: 400;
-        @media (max-width: 767px) {
-          font-size: 14px;
-        }
-      }
-    }
-    &.fstart {
-      display: flex;
-      align-items: flex-start;
-    }
-    &.w100 {
-      width: 100%;
-    }
-    &.w50 {
-      width: calc(100% / 2 - 10px);
-    }
-    &.w25 {
-      width: 25%;
-    }
-    &.row {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-      label {
-        width: 100%;
-      }
-      input {
-        flex: 1 0 auto;
-        &:nth-child(2) {
-          max-width: 200px;
-          width: 100%;
-          flex: 1 0 auto;
-          @media (max-width: 767px) {
-            max-width: calc(50% - 10px);
-            width: 100%;
-          }
-        }
-        @media (max-width: 767px) {
-          max-width: calc(50% - 10px);
-          width: 100%;
-        }
-      }
-    }
-    &--calendar {
-      div {
-        position: relative;
-        width: 100%;
-        input {
-          width: 100%;
-          padding-right: 40px;
-        }
-        &::before {
-          content: "";
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          background-image: url("../img/svg/calendar_month.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          right: 12px;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-      }
-    }
-    @media (max-width: 767px) {
-      width: 100% !important;
-    }
-  }
-  .btn-default {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 720px;
     width: 100%;
-  }
+    padding: 64px 32px;
+    background-color: #f4fbff;
+    border-radius: 16px;
+    display: none;
+    max-height: calc(100vh - 110px);
+    overflow: auto;
+    z-index: 10;
+    scrollbar-width: auto;
+    &::-webkit-scrollbar {
+        width: 4px;
+        // background-color: #333;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #333;
+        border-radius: 9em;
+        box-shadow: inset 1px 1px 10px #f3faf7;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #000;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 0;
+    }
+
+    &.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media(max-width: 767px) {
+        padding: 40px 16px;
+        width: calc(100vw - 16px);
+    }
 }
 
-.modal__subtitle {
-  // display: flex;
-  // justify-content: center;
-  text-align: center;
-  max-width: 508px;
-  line-height: 1.6;
-  font-size: 16px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  @media (max-width: 767px) {
-    font-size: 12px;
-    margin-bottom: 0;
-  }
+.modal-send {
+    flex-direction: column;
+    gap: 32px;
+    display: none;
+    padding: 64px 32px;
+
+    h3 {
+        margin: 0;
+    }
+
+    img {
+        width: 64px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    @media(max-width: 767px) {
+        gap: 16px;
+    }
+
+    &.active {
+        display: flex;
+        align-items: center;
+    }
 }
 
-.modal-appointment__info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-  span {
-    color: #2f5372;
-  }
-  @media (max-width: 767px) {
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.modal-form__inputs {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.modal__row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    input {
+        height: 50px;
+        padding: 0 16px;
+        border-radius: 6px;
+        border: 1px solid #d7dbdf;
+        outline: none;
+    }
+
+    textarea {
+        outline: none;
+        resize: none;
+        height: 156px;
+        border-radius: 6px;
+        padding: 12px 16px;
+        border: 1px solid #d7dbdf;
+    }
+}
+
+.modal__checks {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    li {
+        display: flex;
+        align-items: center;
+    }
+
+    label {
+        padding-right: 0;
+        padding-left: 56px;
+        display: inline;
+        line-height: 1.2;
+
+        &:after {
+            left: 0;
+        }
+
+        @media(max-width: 767px) {
+            font-size: 14px;
+            padding-left: 48px;
+        }
+    }
+}
+
+.modal__flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    @media(max-width: 767px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.modal__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+
+    @media(max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.modal__col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 360px;
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+.modal__file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 121px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #d7dbdf;
+    padding: 24px;
+
+    input {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.modal__file-text {
+    text-align: center;
+    color: #687076;
     font-size: 14px;
-  }
+    font-weight: 600;
 }
 
-.modal-review {
-  textarea {
-    min-height: 195px;
-    resize: none;
-    @media (max-width: 767px) {
-      min-height: 100px;
+.modal__login {
+    text-align: center;
+    @media(max-width: 767px) {
+        padding-left: 32px;
+        padding-right: 32px;
     }
-  }
-  .block-rating {
-    @media (max-width: 767px) {
-      width: 100%;
+}
+
+.modal__login-pic {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+.modal__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+    button {
+        min-width: 220px;
+        text-align: center;
+        justify-content: center;
+        @media(max-width: 767px) {
+            min-width: 100%;
+        }
     }
-  }
-  .form__block {
-    @media (max-width: 767px) {
-      width: 100% !important;
+    @media(max-width: 767px) {
+        flex-direction: column;
     }
-  }
 }

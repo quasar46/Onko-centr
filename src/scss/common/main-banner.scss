@@ -1,0 +1,43 @@
+.main-banner {
+  background-color: var(--main-blue);
+  padding: 48px 56px;
+  position: relative;
+  margin-bottom: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  h1 {
+    max-width: 1144px;
+    font-size: 46px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    @media (max-width: 1919px) {
+      max-width: 800px;
+    }
+    @media (max-width: 767px) {
+      font-size: 28px;
+    }
+  }
+  &::before {
+    content:"";
+    position: absolute;
+    display: block;
+    width: 398px;
+    height: 398px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../img/circles.svg");
+  }
+
+  @media (max-width: 767px) {
+    padding: 32px 24px;
+    margin-bottom: 32px;
+  }
+  &--mode {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  
+}

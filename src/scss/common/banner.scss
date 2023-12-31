@@ -1,5 +1,63 @@
 .banner {
-  img {
-    width: 100%;
+  .swiper-slide {
+    position: relative;
+
+    padding: 113px 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    @media (max-width: 1919px) {
+      padding: 80px;
+    }
+    @media (max-width: 1279px) {
+      padding: 80px 24px;
+    }
+    @media (max-width: 767px) {
+      padding: 32px 20px;
+    }
+    &:before {
+      content:"";
+      position: absolute;
+      width: 800px;
+      height: 100%;
+      background-image: url("../img/back-banner.png");
+      background-size: cover;
+      top: 0;
+      left: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    padding-bottom: 50px;
+  }
+}
+
+.banner__inner {
+  max-width: 615px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  & > * {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+.banner__pic {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.banner__title {
+  font-size: 62px;
+  font-weight: 600;
+  line-height: 1;
+  font-family: Craftwork Grotesk;
+  letter-spacing: -1.24px;
+  @media (max-width: 767px) {
+    font-size: 40px;
   }
 }

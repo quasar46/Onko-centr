@@ -1,0 +1,20 @@
+extends templates/layout
+
+block main 
+  .page
+    ._container 
+      .breadcrumbs 
+        a(href="") Предыдущий ЛВЛ крошка
+      section.main-banner
+        h1 Результаты поиска
+      section.vacancy
+        .block-info.vacancy__empty 
+          h3 По вашему запросу ничего не найдено
+          .block-info__text 
+            p Если вы не нашли нужную услугу или не смогли найти подходящего врача на нашем сайте, не волнуйтесь. Просто позвоните нам по указанному номеру телефона, или напишите на почту, и наши доброжелательные сотрудники ответят на все ваши вопросы и помогут вам найти нужное решение.
+          a(href="tel:+7 999 999-99-98").block-info__link 
+            img(src="img/icons/icn_m_ad_units-blue.svg", alt="")
+            span +7 999 999-99-98
+          a(href="mailto:hr@email.su").block-info__link 
+            img(src="img/icons/icn_m_mail-blue.svg", alt="")
+            span mail@email.su

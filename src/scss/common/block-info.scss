@@ -1,0 +1,111 @@
+.block-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+  .strong {
+    margin-bottom: 32px;
+    @media (max-width: 1279px) {
+      margin-bottom: 24px;
+    }
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 32px;
+  }
+  &--quote {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 140px;
+      height: 130px;
+      background-image: url(../img/quote.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      right: 48px;
+      bottom: 48px;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;margin: 0;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.block-info__bottom {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &--mode {
+    @media (max-width: 767px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
+
+.block-info__row {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  span {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+}
+
+.block-info__inner {
+  max-width: 1144px;
+}
+
+.block-info__text {
+  margin-bottom: 24px;
+  p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.block-info__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  // position: relative;
+  // padding-left: 32px;
+  // &::before {
+  //   content:"";
+  //   position: absolute;
+  //   display: block;
+  //   left: 0;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   width: 24px;
+  //   height: 24px;
+  //   background-image: url("../img/icons/icn_m_mail-blue.svg");
+  //   background-repeat: no-repeat;
+  // }
+  a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}

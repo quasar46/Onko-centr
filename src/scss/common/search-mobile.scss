@@ -1,0 +1,25 @@
+.search-mobile {
+  display: none;
+  input {
+    border-radius: 6px;
+    border: 1px solid  #d7dbdf;
+    background: #fff;
+    display: flex;
+    height: 48px;
+    padding: 12px;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+    width: 100%;
+    outline: none;
+    margin-bottom: 8px;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  &.active {
+    display: block;
+    padding-top: 32px;
+  }
+}

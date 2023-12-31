@@ -1,0 +1,113 @@
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    // min-height: 79px;
+    min-height: 58px;
+    align-items: center;
+    a[href=""] {
+      color: #015c93;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 160%;
+      text-decoration-line: underline;
+    }
+    button {
+      min-width: 200px;
+      justify-content: center;
+      @media (max-width: 1279px) {
+        max-width: 48px;
+        min-width: 48px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .col {
+      &:nth-child(2) {
+        span {
+          white-space: nowrap;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      display: flex;
+      // flex-wrap: wrap;
+      min-height: 128px;
+    }
+  }
+  .item {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid #53a6d8;
+    background: #fff;
+    .btn {
+      width: 251px;
+      justify-content: center;
+      align-self: center;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+      &--mobile {
+        display: none;
+        @media (max-width: 767px) {
+          display: flex;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      padding: 16px;
+    }
+  }
+  .item__body {
+    display: none;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #74c3f2;
+    background-color: #f4fbff;
+    .col {
+      padding: 0 16px;
+    }
+  }
+  .row {
+    &:nth-child(2n) {
+      background-color: #fff;
+    }
+  }
+  .row__head {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .item__head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      font-size: 18px;
+      font-weight: 600;
+
+      &:nth-child(2) {
+        color: #687076;
+      }
+    }
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+}

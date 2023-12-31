@@ -1,6 +1,20 @@
-.news__wrapper {
-  display: flex;
-  flex-direction: column;
-  // align-items: center;
-  align-items: flex-start;
+.news__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 48px 16px;
+  .item {
+    display: flex;
+    flex-direction: column;
+  }
+  .item__pic {
+    margin-bottom: 16px;
+  }
+  @media (max-with: 1279px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
 }

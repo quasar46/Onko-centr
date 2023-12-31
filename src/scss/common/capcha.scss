@@ -1,0 +1,15 @@
+.capcha {
+  height: 50px;
+  img {
+    height: 100%;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+  &--mobile {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+}

@@ -1,97 +1,138 @@
-doctype html
-html(lang="ru")
-  include modules/head
-  body
-    .wrapper
-      include modules/burger-inner
-      include modules/header
-      .page 
-        .breadcrumbs._container
-          a(href="") Главная 
-          span 
-          a(href="") О центре
-          span 
-          a.active Врачи
-        section.services.back-dots.back-dots--2
+extends templates/layout
 
-          .services__wrapper._container
-            .services__head 
-              span Выберите отделение
-            .block-head 
-              h1.title Врачи
-            .services__content 
-              .services__grid.grid.wrap 
-                .services__item.grid__item.box
-                  h3.services__title Поликлиническое отделение
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Отделение анестезиологии-реанимации
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Онкологическое абдоминальное отделение
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Онкологическое отделение опухолей молочной железы
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Онкологическое отделение опухолей головы и шеи
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Онкологическое отделение торакальнои хирургии
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Отделение онкогинекологии
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Отделение онкоурологии
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Химиотерапевтическое отделение 1
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Химиотерапевтическое отделение 2
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Радиологическое отделение
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Отделение опухолей костей, кожи, мягких тканей
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Центр лучевой диагностики
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Эндоскопическое отделение
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Операционное отделение
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Приемное отделение
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Отделение функциональной диагностики и кардио-терапевтической помощи
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Отделение онкоколопроктологии и тазовой хирургии
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Отделение радионуклидной диагностики и терапии
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Дневной стационар
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Центр лабораторно- диагностических исследовании
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Отделение рентгенохирургических методов лечения
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .services__item.grid__item.box
-                  h3.services__title Паллиативное отделение
-                  <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3217 4.89585C10.7685 4.38867 11.5143 4.36582 11.9875 4.84483L23.5 16.5L11.9875 28.1552C11.5143 28.6342 10.7685 28.6113 10.3217 28.1041C9.87483 27.597 9.89614 26.7975 10.3693 26.3185L20.0676 16.5L10.3693 6.68149C9.89614 6.20249 9.87483 5.40303 10.3217 4.89585Z" fill="rgba(27, 63, 94, 0.2)"/></svg>
-                .box-spacer
-
-
-      include modules/footer
-    include modules/script
+block main 
+  .page
+    ._container 
+      .breadcrumbs 
+        a(href="") Предыдущий ЛВЛ крошка
+      section.main-banner
+        h1 Врачи
+      section.doctors 
+        ul 
+          li
+            h3 A 
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+          li
+            h3 A  
+              img(src="img/icons/icn_m_arrow_drop_down-white.svg", alt="")
+            .doctors__list
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+              a(href="") Аллерголог-иммунолог 
+        

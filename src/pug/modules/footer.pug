@@ -1,59 +1,66 @@
 footer.footer
-  .footer__wrapper._container 
-    .footer__row
-      a(href="").footer__logo
-        img(src="img/svg/footer-logo.svg" alt="logo") 
-      p Областное бюджетное учреждение здравоохранения «Курский онкологический научно-клинический центр им. Г.Е. Островерхова» министерства здравоохранения Курской области.  <span class="op08"> 305524, Курская обл., Курский р-он, Рышковский с/с, х. Кислино, ул. Елисеева 1</span> 
-    .footer__row 
-      ul 
-        li
-          a(href="") +7 4712 73-18-96
-          p Горячая линия о порядке направления пациентов на КТ в государственные медицинские учреждения Курской области
-        li
-          a(href="") +7 4712 73-19-18
-          p Call-центр Пн-Пт с 8:00 до 17:00
-        li
-          a Режим работы поликлиники
-          p с 8:00 до18:00
-        li
-          a(href="") +7 4712 73-19-18, доб. 1
-          p Предварительная запись Пн-Пт с 8:00 до 15:00
+  ._container 
+    .footer__inner 
+      .footer__top
+        .footer__col 
+          h5 О центре
+          a(href="") Информация
+          a(href="news.html") Новости
+          a(href="vacancy.html") Вакансии
+          a(href="licenses.html") Лицензии
+          a(href="") Контролирующие органы 
+        .footer__col 
+          h5 Пациентам
+          a(href="reviews.html") Отзывы 
+          a(href="article.html") Статьи
+          a(href="") Акции
+          a(href="contacts.html") Контакты
+        .footer__col 
+          h5 Услуги
+          a(href="") Консультации врачей
+          a(href="diagnostics.html") Диагностика
+          a(href="analyzes.html") Анализы
+        .footer__col
+          h5 Адреса
+          ul 
+            li 
+              p Москва, Варварка улица, дом 3
+              a(href="tel:+7 471 255 55 55") +7 471 255 55 55 
+            li 
+              p Москва, Велозаводская улица, дом 13
+              a(href="tel:+7 471 255 55 55") +7 471 255 55 55 
+            li  
+              p Москва, Велозаводская улица, дом 10
+              a(href="tel:+7 471 255 55 55") +7 471 255 55 55 
 
-        li
-          a(href="") +7 4712 73-18-92
-          p Платные услуги
 
-        li
-          a Приём передач для пациентов стационара ежедневно
-          p с 7:00 до 15:00 и с 17:00 до 19:00
-    .footer__row 
-      a(href="") О центре
-      a(href="") Врачи
-      a(href="") Контакты
-      a(href="") Медицина
-      a(href="") Наука
-      a(href="") Пресс-служба
-      a(href="") Пациентам
-      a(href="") Платные услуги
-    .footer__row 
-      .footer__pics   
-        img(src="img/pic-footer1.png" alt="")
-        img(src="img/pic-footer2.png" alt="")
-      .footer__social 
-        a(href="")
-          img(src="img/svg/vk-icon-footer.svg" alt="")
-        a(href="")
-          img(src="img/svg/ok-icon-footer.svg" alt="")
-        a(href="")
-          img(src="img/svg/telegram-icon-footer.svg" alt="")
-    .footer__row 
-      span.item-g1
+
+      .footer__bottom 
+        a(href="index.html")
+          img(src="img/logo_white_color.svg" alt="") 
+        .footer__links.footer__links--desctop
+          a(href="") Политика конфиденциальности
+          a(href="") Пользовательское соглашение
+          a(href="") Обработка персональных данных
+        .footer__social 
+          a(href="") 
+            img(src="img/icons/icn_m_vk_blue.svg" alt="")
+          a(href="") 
+            img(src="img/icons/icn_m_ok_blue.svg" alt="")
+
+      .footer__links.footer__links--mobile
         a(href="") Политика конфиденциальности
-      span.item-g2
+        a(href="") Пользовательское соглашение
         a(href="") Обработка персональных данных
-      span.item-g3 Разработано в 
-        a(href="") kvokka
-include search-block
-#btnTop.btn-top.blur
-  <svg width="38" height="42" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 42C17.6883 42 16.625 40.9554 16.625 39.6667L16.625 7.96647L4.05438 20.3166C3.12691 21.2278 1.62308 21.2278 0.695607 20.3166C-0.23187 19.4054 -0.23187 17.928 0.695607 17.0168L17.3206 0.683372C17.5483 0.459644 17.8108 0.290862 18.0909 0.177013C18.3645 0.0654937 18.6641 0.00287547 18.9781 -8.29559e-07C19.5786 0.00548086 20.2212 0.23318 20.6794 0.683372L37.3044 17.0168C38.2319 17.928 38.2319 19.4054 37.3044 20.3166C36.3769 21.2278 34.8731 21.2278 33.9456 20.3166L21.375 7.96647L21.375 39.6667C21.375 40.9554 20.3117 42 19 42Z" fill="#2F5372"/></svg>
 
+.up#up
+  img(src="img/icons/arrowUp.svg" alt="")
+
+.overlay
+
+include ../modals/modal-review
+include ../modals/modal-review-send
+include ../modals/modal-vacancy-send
+include ../modules/menu
+include ../modals/modal-login
+include ../modals/modal-city

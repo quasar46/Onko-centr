@@ -1,0 +1,41 @@
+extends templates/layout
+
+block main 
+  .page
+    ._container 
+      section.lk 
+        .lk__wrapper 
+          .lk__head
+            h2 Регистрация
+            span Забыли пароль?
+          ul 
+            li.lk__row 
+              label(for="") Электронная почта
+              input(type="email" placeholder="Email")
+            li.lk__row.lk__row--pass
+              label(for="") Введите пароль
+              .lk__input
+                input(type="password" placeholder="Пароль")
+            li.lk__row.lk__row--pass
+              label(for="") Повторите пароль
+              .lk__input
+                input(type="password" placeholder="Пароль") 
+            li.lk__flex
+              .lk__capcha.lk__capcha--mobile
+                  img(src="img/capcha.png" alt="")
+              .lk__row 
+                label(for="") Введите текст с картинки
+                input(type="text" placeholder="Текст с картинки (если нужна капча)") 
+              .lk__capcha
+                img(src="img/capcha.png" alt="")
+            li.checks.lk__checks
+              ul 
+                li
+                  input(type="checkbox" id="check1")
+                  label(for="check1") Согласен с политикой обработки персональных данных
+                li
+                  input(type="checkbox" id="check2")
+                  label(for="check2") Согласен с политикой конфиденциальности
+            li.lk__btns 
+              button.btn Зарегистрироваться
+              button.btn4 Войти

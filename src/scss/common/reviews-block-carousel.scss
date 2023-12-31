@@ -1,0 +1,33 @@
+.reviews-block-carousel {
+  padding-bottom: 50px;
+  p {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.reviews-block-carousel__title {
+  margin-bottom: 16px;
+}
+
+.reviews-block-carousel__slide {
+  position: relative;
+  height: 100%;
+  @media (max-width: 1279px) {
+    width: 100%;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 140px;
+    height: 130px;
+    background-image: url("../img/quote.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 48px;
+    bottom: 48px;
+  }
+}

@@ -1,0 +1,34 @@
+.vacancy__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+  .block-info {
+    margin-bottom: 0;
+    h3 {
+      @media (max-width: 767px) {
+        margin-bottom: 24px;
+      }
+    }
+    .btn {
+      margin-top: auto;
+    }
+    ul {
+      margin-bottom: 32px;
+      @media (max-width: 767px) {
+        margin-bottom: 24px;
+      }
+    }
+    @media (max-width: 1279px) {
+      min-height: 430px;
+    }
+  }
+  @media (max-width: 1279px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.vacancy__empty {
+  max-width: 1200px;
+  display: flex;
+}

@@ -1,0 +1,24 @@
+.filter-search {
+  position: fixed;
+  width: calc(100vw - 32px);
+  padding: 40px 16px;
+  border-radius: 16px;
+  background: #f4fbff;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: none;
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .input {
+    margin-bottom: 8px;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

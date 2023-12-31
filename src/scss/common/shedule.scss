@@ -1,0 +1,56 @@
+.shedule__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.shedule__item {
+  padding: 32px 24px;
+  padding-right: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 8px;
+  border: 1px solid #53a6d8;
+  background: #f4fbff;
+  @media (max-width: 767px) {
+    padding: 16px;
+    gap: 24px;
+    max-width: calc(50% - 8px);
+  }
+}
+
+.shedule__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  span {
+    font-family: "Craftwork Grotesk", sans-serif;
+    &:first-child {
+      font-size: 18px;
+      font-weight: 500;
+      @media (max-with: 767px) {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+    &:last-child {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+  @media (max-width: 767px) {
+    gap: 16px;
+  }
+}
+
+.shedule__name {
+  font-size: 46px;
+  font-weight: 600;
+  color: var(--main-blue);
+  text-transform: uppercase;
+  font-family: "Craftwork Grotesk", sans-serif;
+  &--mode {
+    color: #E5484D;
+  }
+}

@@ -1,0 +1,20 @@
+extends templates/layout
+
+block main 
+  .page
+    ._container 
+      section.lk 
+        .lk__wrapper 
+          .lk__head
+            h2 Восстановление пароля
+          ul 
+            li.lk__row.lk__row--pass
+              label(for="") Введите пароль
+              .lk__input
+                input(type="password" placeholder="Пароль")
+            li.lk__row.lk__row--pass
+              label(for="") Повторите пароль
+              .lk__input
+                input(type="password" placeholder="Пароль") 
+            li.lk__btns 
+              button.btn Сменить пароль
